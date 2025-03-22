@@ -17,7 +17,7 @@ export default function HeroSection() {
         /> */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#053b4e]/95 via-[#065a6f]/85 to-[#053b4e]/80"></div>
       </div>
-      <div className="container mx-auto px-4 z-10 relative">
+      <div className="container mx-auto px-4 z-10 relative sm:-top-1/2 sm:translate-y-[67%]">
         <div className="max-w-4xl">
           <div className="inline-block mb-6 bg-white/10 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
             March 4th-7th, 2025 • Federal University Otuoke
