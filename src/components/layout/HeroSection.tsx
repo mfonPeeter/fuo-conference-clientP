@@ -5,7 +5,7 @@ import { Users, Award } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[95vh] h-[800px] sm:h-[90vh] xl:h-[105vh] flex items-center">
+    <section className="relative min-h-[95vh] h-[800px] xs:h-[90vh] xl:h-[105vh] flex items-center">
       <div className="absolute inset-0 z-0">
         {/* Background image if any */}
         {/* <Image

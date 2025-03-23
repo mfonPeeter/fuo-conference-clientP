@@ -207,7 +207,7 @@ export default function RegisterPage() {
                 name="otherPhoneNo"
                 id="registerOtherPhoneNo"
                 errorMessage={errors.otherPhoneNo?.message}
-                className="col-span-2"
+                className="sm:col-span-2"
               />
             </div>
 
@@ -221,7 +221,7 @@ export default function RegisterPage() {
                 name="affiliation"
                 id="registerAffiliation"
                 errorMessage={errors.affiliation?.message}
-                className="col-span-2"
+                className="sm:col-span-2"
               />
 
               <div className="space-y-2.5">

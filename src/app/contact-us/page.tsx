@@ -120,7 +120,7 @@ export default function ContactUsPage() {
                 name="email"
                 id="contactEmail"
                 errorMessage={errors.email?.message}
-                className="col-span-2"
+                className="sm:col-span-2"
               />
               <TextArea
                 {...register("message", { required: "Please type a message." })}
