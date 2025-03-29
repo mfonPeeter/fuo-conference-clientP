@@ -92,8 +92,8 @@ export default function AbstractPage() {
                     asterisk.
                   </p>
                   <p className="text-gray-600 mt-1">
-                    Order of authors' names: First name, Initial followed by
-                    Surname.
+                    Order of authors&apos; names: First name, Initial followed
+                    by Surname.
                   </p>
                 </div>
 
