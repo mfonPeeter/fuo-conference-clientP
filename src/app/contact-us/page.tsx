@@ -44,7 +44,7 @@ export default function ContactUsPage() {
       console.log(error);
       toast.error("Failed to register", {
         position: "top-center",
-        style: { background: "#FF3D00", border: "none" },
+        style: { background: "#FF3D00", border: "none", color: "white" },
       });
     }
   };
