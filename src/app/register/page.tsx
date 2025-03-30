@@ -134,8 +134,8 @@ export default function RegisterPage() {
             Register
           </div>
           <h2 className="mb-4 text-[26px] font-semibold leading-8">
-            1st International Conference of the Faculty of Science, Federal
-            University Otuoke
+            Green Chemistry and Artificial Intelligence for Sustainable
+            Development
           </h2>
           <div className="space-y-1 mb-2">
             {guidelines.map(({ heading, details }, index) => (

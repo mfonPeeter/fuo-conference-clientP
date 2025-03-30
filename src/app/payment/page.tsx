@@ -17,7 +17,7 @@ const PaystackButton = dynamic(
 // Paystack configuration
 const PAYSTACK_PUBLIC_KEY = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "";
 const PAYMENT_AMOUNT = 500000; // Amount in kobo (₦5000.00)
-const EMAIL = "science.conf@fuotuoke.edu.ng"; // Replace with actual email
+const EMAIL = "hod.chemistry@fuotuoke.edu.ng"; // Replace with actual email
 
 function PaymentContent() {
   const router = useRouter();

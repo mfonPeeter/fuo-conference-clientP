@@ -106,8 +106,8 @@ const KeyInformation = () => {
                   <MapPin className="h-5 w-5 text-[#118ab2]" />
                 </div>
                 <p className="text-gray-600">
-                  Faculty of Science, Federal University Otuoke, Bayelsa State,
-                  Nigeria
+                  Department of Chemistry, Federal University Otuoke, Bayelsa
+                  State, Nigeria
                 </p>
               </div>
               <div className="flex flex-col items-start lg:flex-col xl:flex-row xl:items-center p-3 bg-[#f8fafc] rounded-xl">
@@ -115,10 +115,10 @@ const KeyInformation = () => {
                   <Mail className="h-5 w-5 text-[#118ab2]" />
                 </div>
                 <Link
-                  href="mailto:science.conf@fuotuoke.edu.ng"
+                  href="mailto:hod.chemistry@fuotuoke.edu.ng"
                   className="text-gray-600"
                 >
-                  science.conf@fuotuoke.edu.ng
+                  hod.chemistry@fuotuoke.edu.ng
                 </Link>
               </div>
               <div className="flex flex-col items-start lg:flex-col xl:flex-row xl:items-center p-3 bg-[#f8fafc] rounded-xl">

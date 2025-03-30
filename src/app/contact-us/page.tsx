@@ -71,7 +71,7 @@ export default function ContactUsPage() {
           <div className="flex flex-col items-center gap-y-2">
             <Mail />
             <span className="text-[13px] font-medium leading-[14px]">
-              science.conf@fuoutoke.edu.ng
+              hod.chemistry@fuotuoke.edu.ng
             </span>
           </div>
           <div className="flex flex-col items-center gap-y-2">

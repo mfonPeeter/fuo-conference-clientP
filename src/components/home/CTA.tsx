@@ -7,7 +7,8 @@ const CTA = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Join Us at the Faculty of Science Conference
+            Join Us at the Green Chemistry and Artificial Intelligence
+            Conference
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
             Be part of this groundbreaking event where science meets innovation.

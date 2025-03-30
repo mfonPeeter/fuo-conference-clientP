@@ -68,8 +68,8 @@ export default function Footer() {
                   <MapPin className="h-5 w-5 text-[#FFD166]" />
                 </div>
                 <span className="text-white/70">
-                  Faculty of Science, Federal University Otuoke, Bayelsa State,
-                  Nigeria
+                  Department of Chemistry, Federal University Otuoke, Bayelsa
+                  State, Nigeria
                 </span>
               </li>
               <li className="flex items-center">
@@ -77,10 +77,10 @@ export default function Footer() {
                   <Mail className="h-5 w-5 text-[#FFD166]" />
                 </div>
                 <Link
-                  href="mailto:science.conf@fuotuoke.edu.ng"
+                  href="mailto:hod.chemistry@fuotuoke.edu.ng"
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  science.conf@fuotuoke.edu.ng
+                  hod.chemistry@fuotuoke.edu.ng
                 </Link>
               </li>
               <li className="flex items-center">
