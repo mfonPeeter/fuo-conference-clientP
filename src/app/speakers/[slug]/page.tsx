@@ -95,11 +95,11 @@ He is presently a series editor with Wiley and Sons, Elsevier, Springer, Taylor 
     institution: "National Centre for Genetic Resources and Biotechnology",
     role: "Research Lead, Tissue Culture Unit",
     image: "/images/speakers/dr-adedotun-afolayan.JPG",
-    bio: `Dr. Adedotun Onoyinka Afolayan is an esteemed Nigerian ecologist and environmental biologist, currently serving as an Assistant Director (Research) at the National Centre for Genetic Resources and Biotechnology (NACGRAB) in Ibadan, Nigeria. At NACGRAB, she *heads* the Tissue Culture Unit within the Biotechnology Department, focusing on plant biodiversity conservation through tissue culture.
+    bio: `Dr. Adedotun Onoyinka Afolayan is an esteemed Nigerian ecologist and environmental biologist, currently serving as an Assistant Director (Research) at the National Centre for Genetic Resources and Biotechnology (NACGRAB) in Ibadan, Nigeria. At NACGRAB, she heads the Tissue Culture Unit within the Biotechnology Department, focusing on plant biodiversity conservation through tissue culture.
 
 Dr. Afolayan's research encompasses environmental pollution assessment, evaluating contamination levels across various environmental components, and investigating the effects of plant extracts on fish reproduction. Her work significantly contributes to understanding and mitigating environmental challenges in Nigeria.
 
-Beyond her research endeavors, Dr. Afolayan is actively involved in professional organizations. She serves as the President-elect of the Africa Region and *past* President of the Nigerian Chapter of the Society for Conservation Biology (SCB). Additionally, she holds the position of Secretary in the International Foundation for Science Nigerian Alumni Association (IFS-NAA), reflecting her commitment to fostering scientific collaboration and mentorship within the Nigerian scientific community.`,
+Beyond her research endeavors, Dr. Afolayan is actively involved in professional organizations. She serves as the President-elect of the Africa Region and past President of the Nigerian Chapter of the Society for Conservation Biology (SCB). Additionally, she holds the position of Secretary in the International Foundation for Science Nigerian Alumni Association (IFS-NAA), reflecting her commitment to fostering scientific collaboration and mentorship within the Nigerian scientific community.`,
   },
   "adekunle-adeleke": {
     name: "Dr. Adekunle Adeleke",
@@ -330,24 +330,26 @@ export default function SpeakerPage({ params }: { params: { slug: string } }) {
                 </div>
               )}
 
-              <div>
-                <h3 className="text-xl font-bold text-[#073b4c] mb-4">
-                  Notable Projects
-                </h3>
-                <div className="grid gap-4">
-                  {speaker.projects?.map((project, index) => (
-                    <div
-                      key={index}
-                      className="bg-white p-4 rounded-xl shadow-sm border border-gray-100"
-                    >
-                      <h4 className="font-bold text-[#073b4c] mb-2">
-                        {project.name}
-                      </h4>
-                      <p className="text-gray-600">{project.description}</p>
-                    </div>
-                  ))}
+              {speaker.projects && speaker.projects.length > 0 && (
+                <div>
+                  <h3 className="text-xl font-bold text-[#073b4c] mb-4">
+                    Notable Projects
+                  </h3>
+                  <div className="grid gap-4">
+                    {speaker.projects.map((project, index) => (
+                      <div
+                        key={index}
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100"
+                      >
+                        <h4 className="font-bold text-[#073b4c] mb-2">
+                          {project.name}
+                        </h4>
+                        <p className="text-gray-600">{project.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
