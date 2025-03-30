@@ -226,16 +226,14 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Revolutionizing a Sustainable Tomorrow: Harnessing Science,
-                  Innovation, and Community Power to Drive Circular Economy
-                  Solutions, Climate Resilience, and a Thriving Blue and Green
-                  Economy.
+                  Green Chemistry and Artificial Intelligence for Sustainable
+                  Development in the Niger Delta
                 </p>
               </div>
             </div>
             <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
               <Image
-                src="/images/conference-room.jpg"
+                src="/images/school.JPG"
                 alt="Conference room"
                 fill
                 className="object-cover"

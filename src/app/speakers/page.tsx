@@ -43,12 +43,12 @@ const speakers = [
     image: "/images/speakers/dr-adekunle-adeleke.png", // Replace with actual image
   },
   {
-    name: "Dr. Ifeyinwa Ijeoma Obianyo",
+    name: "Engr. Dr. Ifeyinwa Ijeoma Obianyo",
     title: "Department of Civil Engineering",
     institution: "Nile University of Nigeria",
     role: "M.Eng. Thesis Coordinator",
     slug: "ifeyinwa-obianyo",
-    image: "/images/speakers/dr-ifeyinwa-ijeoma-obianyo.png", // Replace with actual image
+    image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG", // Replace with actual image
   },
 ];
 

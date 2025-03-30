@@ -241,15 +241,14 @@ export default function AbstractPage() {
                   <li>Late submissions will not be considered.</li>
                   <li>
                     All submitted abstracts will undergo a rigorous peer-review
-                    process.
+                    process and accepted abstracts will deposited in an
+                    open-access repository with DOI link for citations.
                   </li>
                   <li>
-                    Accepted abstracts will be published in the conference
-                    proceedings.
-                  </li>
-                  <li>
-                    Presented papers will be published in International Journal
-                    of Basic Science & Technology with DOI and well indexed.
+                    Full papers of accepted abstracts will be invited for
+                    publications in scopus indexed journals such as Discover
+                    Chemistry (Springer), Scientific African (Elsevier) and the
+                    Nigerian Journal of Physical Sciences
                   </li>
                 </ul>
               </AlertDescription>

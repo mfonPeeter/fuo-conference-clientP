@@ -129,13 +129,13 @@ With over 180 articles published in reputable international journals and six boo
     title: "Department of Civil Engineering",
     institution: "Nile University of Nigeria",
     role: "M.Eng. Thesis Coordinator",
-    image: "/images/speakers/dr-ifeyinwa-ijeoma-obianyo.png",
+    image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG",
     bio: `Dr. Ifeyinwa Ijeoma Obianyo is a distinguished academic and researcher in the Department of Civil Engineering at Nile University of Nigeria, Abuja. She holds a B.Eng. in Civil Engineering from the University of Nigeria, Nsukka, and both an M.Sc. and Ph.D. in Materials Science and Engineering from the African University of Science and Technology (AUST), Abuja.
 
 A strong advocate for STEM education, Dr. Obianyo actively participates in outreach programs to inspire young girls to pursue careers in science and engineering. She has received numerous accolades, including the World Bank-Pan African Materials Institute scholarship and the RILEM Ph.D. Grant.`,
     projects: [
       {
-        name: "Bone Ash and Hydrated Lime Stabilization",
+        name: "Soil Stabilization using Ashes of different Agro-waste such as Bone Ash and Rice Husk Ash",
         description:
           "Exploration of the mechanical behavior of lateritic soil stabilized with bone ash and hydrated lime for sustainable building materials.",
       },
