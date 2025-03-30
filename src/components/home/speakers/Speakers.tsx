@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../../ui/button";
-import SpeakerCard from "./SpeakerCard";
 import Link from "next/link";
 
 const Speakers = () => {
