@@ -5,19 +5,19 @@ import { MessageCircle, Calendar, MapPin, Mail, Phone } from "lucide-react";
 const importantDates = [
   {
     heading: "Abstract Submission",
-    timeframe: "January 31, 2025",
+    timeframe: "July 30, 2025",
   },
   {
     heading: "Early Bird Registration",
-    timeframe: "January 31, 2025",
+    timeframe: "May 31, 2025",
   },
   {
     heading: "Registration Deadline",
-    timeframe: "February 20, 2025",
+    timeframe: "August 15, 2025",
   },
   {
     heading: "Conference Dates",
-    timeframe: "March 4-7, 2025",
+    timeframe: "September 2-4, 2025",
   },
 ];
 

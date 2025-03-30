@@ -7,9 +7,9 @@ import HeroSection from "@/components/layout/HeroSection";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Faculty of Science Conference",
+  title: "Harnessing Green Chemistry and AI for Sustainable Development",
   description:
-    "Join us for the Sustainable Tomorrow Conference from March 4th-7th, 2025, as we explore circular economy solutions, climate resilience, sustainability, and the blue & green economy. Connect with scholars, industry leaders, and change-makers in Bayelsa State and the Niger-Delta. Be part of the movement shaping a sustainable future.",
+    "Join us for the Faculty of Science Conference on 'Harnessing Green Chemistry and Artificial Intelligence for Sustainable Development in the Niger Delta' from September 2-4, 2025, at Federal University Otuoke, Bayelsa State, Nigeria. Connect with scholars, industry leaders, and innovators shaping a sustainable future through green chemistry and AI.",
 };
 
 export default function RootLayout({

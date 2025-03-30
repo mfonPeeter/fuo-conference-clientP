@@ -1,11 +1,11 @@
 import { ChevronRight, FileText, AlertCircle } from "lucide-react";
+import Image from "next/image";
 
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -17,64 +17,98 @@ const guidelines = [
   {
     heading: "Abstract Length",
     details:
-      " Abstracts should be concise and no longer than 250 words, and maximum of one page.",
-  },
-  {
-    heading: "Format",
-    details:
-      " Abstracts should be submitted in a clear and readable format, preferably in Microsoft Word.",
+      "Maximum 250 words; briefly summarize the study, including background, methodology, results, and conclusions. Avoid references or citations in the abstract.",
   },
   {
     heading: "Title",
     details:
-      " Bold, concise, and descriptive title reflecting the essence of the study.",
+      "Bold, concise, and descriptive title reflecting the essence of the study (centered).",
   },
   {
-    heading: "Content",
+    heading: "Author(s)",
     details:
-      "Abstracts should clearly outline the research question, methodology, key findings, and conclusions.",
+      "Full Name (First Name, followed by Initials and then Surname) with superscript numbers for affiliations. List all authors with their respective affiliations.",
+  },
+  {
+    heading: "Corresponding Author",
+    details: "Mark with an asterisk (*) and include email address.",
   },
   {
     heading: "Keywords",
     details:
-      "Please provide up to 5 relevant keywords to facilitate indexing and retrieval.",
+      "Provide 4-6 keywords related to the abstract for indexing purposes.",
   },
+];
+
+const formattingRequirements = [
+  { item: "Font", value: "Times New Roman" },
+  { item: "Size", value: "12-point font" },
+  { item: "Spacing", value: "Single line spacing" },
+  { item: "Margins", value: "1-inch margins on all sides" },
+  { item: "File Format", value: "Submit as a Word document (.docx) or PDF" },
 ];
 
 const importantDates = [
   {
     heading: "Abstract Submission Deadline",
-    timeframe: "January 31, 2025",
+    timeframe: "July 30, 2025",
   },
   {
     heading: "Notification of Acceptance",
-    timeframe: "February 10, 2025",
+    timeframe: "Within 2 weeks of submission",
   },
   {
     heading: "Conference Dates",
-    timeframe: "March 4-7, 2025",
+    timeframe: "September 2-4, 2025",
   },
 ];
+
+const exampleAbstract = {
+  title:
+    "Synthesis and Characterization of Manganese-Theophylline Complexes with Enhanced Stability and Solubility",
+  authors: [
+    {
+      name: "Olufunso O. Abosede",
+      affiliation:
+        "Department of Chemistry, Federal University Otuoke, Bayelsa State, Nigeria",
+      isCorresponding: true,
+      email: "abosedeoo@fuotuoke.edu.ng",
+    },
+    {
+      name: "Kelechi Peace Kanu",
+      affiliation:
+        "Department of Biochemistry, Federal University Otuoke, Bayelsa State, Nigeria",
+      isCorresponding: false,
+    },
+  ],
+  keywords: [
+    "Theophylline",
+    "manganese complexes",
+    "synthesis",
+    "characterization",
+    "UV-Vis spectroscopy",
+    "FTIR spectroscopy",
+  ],
+};
 
 export default function AbstractPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Main Content */}
       <section className="py-16 bg-[#edf6f9]">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-[800px]">
+          <div className="mx-auto max-w-[800px] space-y-6">
             {/* Guidelines Section */}
             <Card className="shadow-lg border-[#4cc9f0]/20">
               <CardHeader className="bg-[#073b4c] text-white rounded-t-lg">
                 <CardTitle className="flex items-center">
                   <FileText className="h-5 w-5 mr-2 text-[#ffd166]" />
-                  Submission Guidelines
+                  Abstract Submission Guidelines
                 </CardTitle>
                 <CardDescription className="text-white/80">
                   Please read carefully before submitting
                 </CardDescription>
               </CardHeader>
-              <CardContent className="pt-6 space-y-4">
+              <CardContent className="pt-6 space-y-6">
                 {guidelines.map(({ heading, details }, index) => (
                   <div key={index}>
                     <h3 className="font-bold text-[#073b4c] mb-2">
@@ -85,25 +119,19 @@ export default function AbstractPage() {
                 ))}
 
                 <div>
-                  <h3 className="font-bold text-[#073b4c] mb-2">Author(s):</h3>
-                  <p className="text-gray-600">
-                    List all authors, including their affiliations and email
-                    address of corresponding author which should be marked with
-                    asterisk.
-                  </p>
-                  <p className="text-gray-600 mt-1">
-                    Order of authors&apos; names: First name, Initial followed
-                    by Surname.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-[#073b4c] mb-2">Formatting:</h3>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
-                    <li>Font: Times New Roman</li>
-                    <li>Font Size: 12</li>
-                    <li>Line Spacing: 1.5</li>
-                    <li>Margins: 1 inch on all sides</li>
+                  <h3 className="font-bold text-[#073b4c] mb-2">
+                    Formatting Requirements:
+                  </h3>
+                  <ul className="list-none space-y-2">
+                    {formattingRequirements.map(({ item, value }, index) => (
+                      <li
+                        key={index}
+                        className="flex justify-between text-gray-600"
+                      >
+                        <span className="font-medium">{item}:</span>
+                        <span>{value}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
@@ -128,20 +156,82 @@ export default function AbstractPage() {
                   </ul>
                 </div>
               </CardContent>
-              <CardFooter className="bg-[#4cc9f0]/10 flex flex-col items-start p-4 rounded-b-lg">
-                <p className="text-sm text-[#073b4c] font-medium mb-2">
-                  For any inquiries, please email:
-                </p>
-                <Link
-                  href="mailto:science.conf@fuotuoke.edu.ng"
-                  className="text-[#4cc9f0] hover:underline"
-                >
-                  science.conf@fuotuoke.edu.ng
-                </Link>
-              </CardFooter>
             </Card>
 
-            <Alert className="mt-6 border-[#ffd166] bg-[#ffd166]/10">
+            {/* Example Abstract Template */}
+            <Card className="shadow-lg border-[#4cc9f0]/20">
+              <CardHeader className="bg-[#073b4c] text-white rounded-t-lg">
+                <CardTitle className="flex items-center">
+                  <FileText className="h-5 w-5 mr-2 text-[#ffd166]" />
+                  Example Abstract Template
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <div className="relative w-full aspect-[1.414/1] mb-8">
+                  <Image
+                    src="/images/abstract/example-abstract.png"
+                    alt="Example Abstract Format"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+
+                <div className="space-y-6 font-['Times_New_Roman']">
+                  <h2 className="text-center font-bold text-lg text-[#073b4c]">
+                    {exampleAbstract.title}
+                  </h2>
+
+                  <div className="text-center space-y-2">
+                    <p>
+                      {exampleAbstract.authors.map((author, index) => (
+                        <span key={index}>
+                          <sup>{index + 1}</sup>
+                          {author.name}
+                          {author.isCorresponding && "*"}
+                          {index < exampleAbstract.authors.length - 1 && ", "}
+                        </span>
+                      ))}
+                    </p>
+                    <div className="text-sm text-gray-600">
+                      {exampleAbstract.authors.map((author, index) => (
+                        <p key={index}>
+                          <sup>{index + 1}</sup>
+                          {author.affiliation}
+                        </p>
+                      ))}
+                    </div>
+                    <p className="text-sm">
+                      *Email:{" "}
+                      {
+                        exampleAbstract.authors.find((a) => a.isCorresponding)
+                          ?.email
+                      }
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-[#073b4c] mb-2">Abstract</h3>
+                    <p className="text-gray-600">
+                      This study explores the synthesis and characterization of
+                      manganese complexes of theophylline, a xanthine derivative
+                      with therapeutic relevance, aimed at improving its
+                      pharmacological properties... [Summarize in one paragraph
+                      using up to 250 words]
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-[#073b4c] mb-2">Keywords:</h3>
+                    <p className="text-gray-600">
+                      {exampleAbstract.keywords.join(", ")}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Alert className="border-[#ffd166] bg-[#ffd166]/10">
               <AlertCircle className="h-4 w-4 text-[#ffd166]" />
               <AlertTitle className="text-[#073b4c] font-bold">
                 Please Note
@@ -176,7 +266,6 @@ export default function AbstractPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
       <CTA />
     </div>
   );

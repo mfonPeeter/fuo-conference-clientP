@@ -12,24 +12,25 @@ const About = () => {
               About The Conference
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#073b4c] mb-6 leading-tight">
-              Advancing Scientific Research and Innovation
+              Harnessing Green Chemistry and AI for Sustainable Development
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
                 The Faculty of Science Conference at Federal University Otuoke
-                is a premier academic event bringing together researchers,
-                scientists, and scholars from various disciplines to share
-                knowledge and foster collaboration.
+                presents a groundbreaking exploration of how green chemistry and
+                artificial intelligence can drive sustainable development in the
+                Niger Delta region.
               </p>
               <p>
-                Our 1st Annual Conference will be held in a hybrid format,
-                allowing participants to join either in-person or virtually from
-                anywhere in the world.
+                Our conference will be held in a hybrid format from September
+                2-4, 2025, bringing together researchers, scientists, and
+                innovators to share cutting-edge developments in environmentally
+                friendly chemical processes and AI applications.
               </p>
               <p>
-                The conference aims to address current challenges in science and
-                technology while promoting innovative solutions for sustainable
-                development.
+                Join us as we address critical challenges in sustainability
+                while promoting innovative solutions that combine the power of
+                green chemistry and artificial intelligence for a better future.
               </p>
               <Link
                 href="/about"
@@ -43,7 +44,7 @@ const About = () => {
           <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
             <Image
               src="/images/conference-room.jpg"
-              alt="Conference room"
+              alt="Conference venue at Federal University Otuoke"
               fill
               className="object-cover"
             />

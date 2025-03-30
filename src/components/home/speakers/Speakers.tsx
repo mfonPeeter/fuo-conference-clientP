@@ -1,6 +1,7 @@
-// import { ArrowRight } from "lucide-react";
-// import { Button } from "../../ui/button";
+import { ArrowRight } from "lucide-react";
+import { Button } from "../../ui/button";
 import SpeakerCard from "./SpeakerCard";
+import Link from "next/link";
 
 const Speakers = () => {
   return (
@@ -17,48 +18,50 @@ const Speakers = () => {
             Distinguished Keynote Speakers
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Learn from leading experts in various scientific fields who will
-            share their insights and latest research findings.
+            Learn from leading experts in green chemistry, artificial
+            intelligence, and sustainable development who will share their
+            insights and latest research findings.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <SpeakerCard
-            name="Prof. Sarah Johnson"
-            role="Quantum Physics"
-            institution="MIT"
-            imageUrl="/images/speakers-placeholder.avif"
+            name="Prof. Bamidele Adebisi"
+            role="Professor in Intelligent Infrastructure Systems"
+            institution="Manchester Metropolitan University"
+            imageUrl="/images/placeholder-speaker.jpg"
           />
           <SpeakerCard
-            name="Dr. Michael Chen"
-            role="Biotechnology"
-            institution="Stanford University"
-            imageUrl="/images/speakers-placeholder.avif"
+            name="Prof. Stephen A. Uzoekwe"
+            role="Professor of Analytical-Environmental Chemistry"
+            institution="Delta State University Abraka"
+            imageUrl="/images/placeholder-speaker.jpg"
           />
           <SpeakerCard
-            name="Prof. Adebayo Olatunji"
-            role="Environmental Science"
-            institution="University of Lagos"
-            imageUrl="/images/speakers-placeholder.avif"
+            name="Prof. Charles O. Adetunji"
+            role="Professor of Microbiology"
+            institution="Edo State University Uzairue"
+            imageUrl="/images/placeholder-speaker.jpg"
           />
           <SpeakerCard
-            name="Dr. Fatima Al-Zahrani"
-            role="Artificial Intelligence"
-            institution="King's College London"
-            imageUrl="/images/speakers-placeholder.avif"
+            name="Dr. Adedotun Afolayan"
+            role="Assistant Director"
+            institution="National Centre for Genetic Resources and Biotechnology"
+            imageUrl="/images/placeholder-speaker.jpg"
           />
         </div>
 
-        {/* If there a lot of speakers, you can create a page for this */}
-        {/* <div className="text-center mt-12">
-          <Button
-            variant="outline"
-            className="border-[#118ab2] text-[#118ab2] hover:bg-[#118ab2]/5 rounded-full px-8 group"
-          >
-            View All Speakers
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </div> */}
+        <div className="text-center mt-12">
+          <Link href="/speakers">
+            <Button
+              variant="outline"
+              className="border-[#118ab2] text-[#118ab2] hover:bg-[#118ab2]/5 rounded-full px-8 group"
+            >
+              View All Speakers
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
