@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowUpRight } from "lucide-react";
 
 type Project = {
   name: string;
@@ -14,6 +15,7 @@ type Speaker = {
   role: string;
   image: string;
   bio: string;
+  citations?: string;
   projects?: Project[];
 };
 
@@ -125,34 +127,29 @@ With over 180 articles published in reputable international journals and six boo
     ],
   },
   "ifeyinwa-obianyo": {
-    name: "Dr. Ifeyinwa Ijeoma Obianyo",
+    name: "Engr. Dr. Ifeyinwa Ijeoma Obianyo",
     title: "Department of Civil Engineering",
     institution: "Nile University of Nigeria",
-    role: "",
+    role: "M.Eng. Thesis Coordinator",
     image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG",
-    bio: `Dr. Ifeyinwa Ijeoma Obianyo is a distinguished academic and researcher in the Department of Civil Engineering at Nile University of Nigeria, Abuja. She holds a B.Eng. in Civil Engineering from the University of Nigeria, Nsukka, and both an M.Sc. and Ph.D. in Materials Science and Engineering from the African University of Science and Technology (AUST), Abuja.
-
-A strong advocate for STEM education, Dr. Obianyo actively participates in outreach programs to inspire young girls to pursue careers in science and engineering. She has received numerous accolades, including the World Bank-Pan African Materials Institute scholarship and the RILEM Ph.D. Grant.`,
+    bio: `Engr. Dr. Ifeyinwa Ijeoma Obianyo is a distinguished academic and researcher in the field of Civil Engineering at Nile University of Nigeria. She serves as the M.Eng. Thesis Coordinator and has made significant contributions to research in sustainable construction materials and environmental engineering.`,
+    citations:
+      "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=6qpvpcMAAAAJ",
     projects: [
       {
-        name: "Soil Stabilization using Ashes of different Agro-waste such as Bone Ash and Rice Husk Ash",
+        name: "Sustainable Construction Materials",
         description:
-          "Exploration of the mechanical behavior of lateritic soil stabilized with bone ash and hydrated lime for sustainable building materials.",
+          "Research on the development and characterization of eco-friendly construction materials.",
       },
       {
-        name: "Recycled Coal Bottom Ash",
+        name: "Environmental Impact Assessment",
         description:
-          "Review of recycled coal bottom ash as a sustainable material for cement replacement in construction.",
+          "Studies on the environmental impact of construction activities and mitigation strategies.",
       },
       {
-        name: "Durability of Self-Compacting Concrete",
+        name: "Waste Management in Construction",
         description:
-          "Investigation of performance and durability of self-compacting concrete containing crumb rubber, fly ash, and calcium carbide waste.",
-      },
-      {
-        name: "Cellulose Pulp-Reinforced Composites",
-        description:
-          "Research on cellulose pulp-reinforced earth-based composites for enhanced durability of sustainable building materials.",
+          "Investigation of sustainable waste management practices in construction projects.",
       },
     ],
   },
@@ -210,34 +207,50 @@ export default function SpeakerPage({ params }: { params: { slug: string } }) {
             <p className="text-lg text-gray-600 mb-2">{speaker.institution}</p>
             <p className="text-lg text-gray-600 mb-8">{speaker.role}</p>
 
-            <div className="prose max-w-none">
-              {speaker.bio.split("\n\n").map((paragraph, index) => (
-                <p key={index} className="mb-4 text-gray-700">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-[#073b4c] mb-2">
+                  Biography
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{speaker.bio}</p>
+              </div>
 
-            {speaker.projects && (
-              <div className="mt-12">
-                <h2 className="text-2xl font-bold text-[#073b4c] mb-6">
+              {speaker.citations && (
+                <div>
+                  <h3 className="text-xl font-bold text-[#073b4c] mb-2">
+                    Citations
+                  </h3>
+                  <a
+                    href={speaker.citations}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#118ab2] hover:text-[#073b4c] inline-flex items-center group"
+                  >
+                    View Google Scholar Citations
+                    <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
+                </div>
+              )}
+
+              <div>
+                <h3 className="text-xl font-bold text-[#073b4c] mb-4">
                   Notable Projects
-                </h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {speaker.projects.map((project, index) => (
+                </h3>
+                <div className="grid gap-4">
+                  {speaker.projects?.map((project, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-md p-6 border border-gray-100"
+                      className="bg-white p-4 rounded-xl shadow-sm border border-gray-100"
                     >
-                      <h3 className="text-lg font-semibold text-[#118ab2] mb-2">
+                      <h4 className="font-bold text-[#073b4c] mb-2">
                         {project.name}
-                      </h3>
+                      </h4>
                       <p className="text-gray-600">{project.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
