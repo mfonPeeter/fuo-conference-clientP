@@ -32,7 +32,7 @@ const speakers = [
     institution: "National Centre for Genetic Resources and Biotechnology",
     role: "Research Lead, Tissue Culture Unit",
     slug: "adedotun-afolayan",
-    image: "/images/speakers/dr-adedotun-afolayan.png", // Replace with actual image
+    image: "/images/speakers/dr-adedotun-afolayan.JPG", // Replace with actual image
   },
   {
     name: "Dr. Adekunle Adeleke",
@@ -46,7 +46,7 @@ const speakers = [
     name: "Engr. Dr. Ifeyinwa Ijeoma Obianyo",
     title: "Department of Civil Engineering",
     institution: "Nile University of Nigeria",
-    role: "M.Eng. Thesis Coordinator",
+    role: "",
     slug: "ifeyinwa-obianyo",
     image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG", // Replace with actual image
   },

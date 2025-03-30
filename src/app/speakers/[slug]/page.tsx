@@ -85,12 +85,12 @@ He is presently a series editor with Wiley and Sons, Elsevier, Springer, Taylor 
     title: "Assistant Director",
     institution: "National Centre for Genetic Resources and Biotechnology",
     role: "Research Lead, Tissue Culture Unit",
-    image: "/images/speakers/dr-adedotun-afolayan.png",
-    bio: `Dr. Adedotun Onoyinka Afolayan is an esteemed Nigerian ecologist and environmental biologist, currently serving as an Assistant Director (Research) at the National Centre for Genetic Resources and Biotechnology (NACGRAB) in Ibadan, Nigeria. At NACGRAB, she leads the Tissue Culture Unit within the Biotechnology Department, focusing on plant biodiversity conservation through tissue culture.
+    image: "/images/speakers/dr-adedotun-afolayan.JPG",
+    bio: `Dr. Adedotun Onoyinka Afolayan is an esteemed Nigerian ecologist and environmental biologist, currently serving as an Assistant Director (Research) at the National Centre for Genetic Resources and Biotechnology (NACGRAB) in Ibadan, Nigeria. At NACGRAB, she *heads* the Tissue Culture Unit within the Biotechnology Department, focusing on plant biodiversity conservation through tissue culture.
 
 Dr. Afolayan's research encompasses environmental pollution assessment, evaluating contamination levels across various environmental components, and investigating the effects of plant extracts on fish reproduction. Her work significantly contributes to understanding and mitigating environmental challenges in Nigeria.
 
-Beyond her research endeavors, Dr. Afolayan is actively involved in professional organizations. She serves as the President-elect of the Africa Region and President of the Nigerian Chapter of the Society for Conservation Biology (SCB). Additionally, she holds the position of Secretary in the International Foundation for Science Nigerian Alumni Association (IFS-NAA), reflecting her commitment to fostering scientific collaboration and mentorship within the Nigerian scientific community.`,
+Beyond her research endeavors, Dr. Afolayan is actively involved in professional organizations. She serves as the President-elect of the Africa Region and *past* President of the Nigerian Chapter of the Society for Conservation Biology (SCB). Additionally, she holds the position of Secretary in the International Foundation for Science Nigerian Alumni Association (IFS-NAA), reflecting her commitment to fostering scientific collaboration and mentorship within the Nigerian scientific community.`,
   },
   "adekunle-adeleke": {
     name: "Dr. Adekunle Adeleke",
@@ -128,7 +128,7 @@ With over 180 articles published in reputable international journals and six boo
     name: "Dr. Ifeyinwa Ijeoma Obianyo",
     title: "Department of Civil Engineering",
     institution: "Nile University of Nigeria",
-    role: "M.Eng. Thesis Coordinator",
+    role: "",
     image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG",
     bio: `Dr. Ifeyinwa Ijeoma Obianyo is a distinguished academic and researcher in the Department of Civil Engineering at Nile University of Nigeria, Abuja. She holds a B.Eng. in Civil Engineering from the University of Nigeria, Nsukka, and both an M.Sc. and Ph.D. in Materials Science and Engineering from the African University of Science and Technology (AUST), Abuja.
 
