@@ -2,6 +2,8 @@
 
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+import { encryptData } from "@/utils/encryption";
 
 import { Button } from "@/components/ui/button";
 import { Input, FileUploadField } from "@/components/ui/form-fields";
@@ -43,11 +45,11 @@ export default function RegisterPage() {
   const {
     register,
     handleSubmit,
-    reset,
     control,
     watch,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
+  const router = useRouter();
 
   const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
@@ -72,17 +74,17 @@ export default function RegisterPage() {
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      // Check file size
+      // Check file size for required files
       if (
-        (abstractFileData && abstractFileData[0].size > MAX_FILE_SIZE) ||
+        (abstractFileData && abstractFileData[0]?.size > MAX_FILE_SIZE) ||
         (oralPresentersFileData &&
-          oralPresentersFileData[0].size > MAX_FILE_SIZE) ||
+          oralPresentersFileData[0]?.size > MAX_FILE_SIZE) ||
         (paymentEvidenceFileData &&
-          paymentEvidenceFileData[0].size > MAX_FILE_SIZE)
+          paymentEvidenceFileData[0]?.size > MAX_FILE_SIZE)
       ) {
         toast.error("File size exceeds 10MB. Please upload a smaller file.", {
           position: "top-center",
-          style: { background: "#FF3D00", border: "none" },
+          style: { background: "#FF3D00", border: "none", color: "white" },
         });
         return;
       }
@@ -90,27 +92,36 @@ export default function RegisterPage() {
       const formData = new FormData();
 
       Object.entries(data).forEach(([key, value]) => {
-        if (value instanceof FileList) {
+        if (value instanceof FileList && value.length > 0) {
           formData.append(key, value[0]); // Handle file uploads
-        } else {
+        } else if (value !== null) {
           formData.append(key, value as string); // Handle other form values
         }
       });
 
-      const res = await fetch("url", {
-        method: "POST",
-        body: formData,
+      // const res = await fetch("url", {
+      //   method: "POST",
+      //   body: formData,
+      // });
+
+      // if (!res.ok) return;
+
+      // Encrypt the registration data
+      const registrationData = encryptData({
+        surname: data.surname,
+        otherNames: data.otherNames,
+        email: data.email,
+        whatsAppNo: data.whatsAppNo,
+        otherPhoneNo: data.otherPhoneNo,
       });
 
-      if (!res.ok) return;
-
-      toast.success("Registration Successful!", { position: "top-center" });
-      reset(); // Reset form
-    } catch (error: any) {
+      // Use router.push for navigation
+      router.push(`/payment?data=${registrationData}`);
+    } catch (error) {
       console.log(error);
       toast.error("Failed to register", {
         position: "top-center",
-        style: { background: "#FF3D00", border: "none" },
+        style: { background: "#FF3D00", border: "none", color: "white" },
       });
     }
   };
@@ -195,15 +206,9 @@ export default function RegisterPage() {
                 errorMessage={errors.whatsAppNo?.message}
               />
               <Input
-                {...register("otherPhoneNo", {
-                  required: "Please input number.",
-                  pattern: {
-                    value: /^\+?[0-9]*$/,
-                    message: "Numbers only!",
-                  },
-                })}
+                {...register("otherPhoneNo")}
                 type="tel"
-                placeholder="Other Phone No.*"
+                placeholder="Other Phone No."
                 name="otherPhoneNo"
                 id="registerOtherPhoneNo"
                 errorMessage={errors.otherPhoneNo?.message}
@@ -268,7 +273,10 @@ export default function RegisterPage() {
                       errorMessage={errors?.modeOfAttendance?.message}
                     >
                       {["Oral", "Poster", "Any is okay"].map((option) => (
-                        <div className="flex items-center gap-x-[9px]">
+                        <div
+                          key={option}
+                          className="flex items-center gap-x-[9px]"
+                        >
                           <RadioGroupItem
                             value={option}
                             id={`registerPreferredPresentationType_${option}`}
@@ -298,7 +306,10 @@ export default function RegisterPage() {
                       errorMessage={errors?.modeOfAttendance?.message}
                     >
                       {["Yes", "No", "Maybe", "Other"].map((option) => (
-                        <div className="flex items-center gap-x-[9px]">
+                        <div
+                          key={option}
+                          className="flex items-center gap-x-[9px]"
+                        >
                           <RadioGroupItem
                             value={option}
                             id={`registerPreConferenceWorkshop_${option}`}

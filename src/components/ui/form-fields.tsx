@@ -1,7 +1,5 @@
 import React from "react";
-import { UseFormSetError } from "react-hook-form";
 import { twMerge } from "tailwind-merge";
-import { FormValues } from "@/app/register/page";
 
 import { ErrorMessage } from "./error-message";
 
