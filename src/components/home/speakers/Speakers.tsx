@@ -24,33 +24,6 @@ const Speakers = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <SpeakerCard
-            name="Prof. Bamidele Adebisi"
-            role="Professor in Intelligent Infrastructure Systems"
-            institution="Manchester Metropolitan University"
-            imageUrl="/images/placeholder-speaker.jpg"
-          />
-          <SpeakerCard
-            name="Prof. Stephen A. Uzoekwe"
-            role="Professor of Analytical-Environmental Chemistry"
-            institution="Delta State University Abraka"
-            imageUrl="/images/placeholder-speaker.jpg"
-          />
-          <SpeakerCard
-            name="Prof. Charles O. Adetunji"
-            role="Professor of Microbiology"
-            institution="Edo State University Uzairue"
-            imageUrl="/images/placeholder-speaker.jpg"
-          />
-          <SpeakerCard
-            name="Dr. Adedotun Afolayan"
-            role="Assistant Director"
-            institution="National Centre for Genetic Resources and Biotechnology"
-            imageUrl="/images/placeholder-speaker.jpg"
-          />
-        </div>
-
         <div className="text-center mt-12">
           <Link href="/speakers">
             <Button
