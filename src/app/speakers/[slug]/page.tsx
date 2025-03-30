@@ -15,7 +15,14 @@ type Speaker = {
   role: string;
   image: string;
   bio: string;
-  citations?: string;
+  citations?: {
+    googleScholar?: string;
+    scopus?: string;
+    researchGate?: string;
+    orcid?: string;
+    webOfScience?: string;
+    publons?: string;
+  };
   projects?: Project[];
 };
 
@@ -133,8 +140,16 @@ With over 180 articles published in reputable international journals and six boo
     role: "",
     image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG",
     bio: `Engr. Dr. Ifeyinwa Ijeoma Obianyo is a distinguished academic and researcher in the field of Civil Engineering at Nile University of Nigeria. She serves as the M.Eng. Thesis Coordinator and has made significant contributions to research in sustainable construction materials and environmental engineering.`,
-    citations:
-      "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=6qpvpcMAAAAJ",
+    citations: {
+      googleScholar:
+        "https://scholar.google.com/citations?user=6qpvpcMAAAAJ&hl=en",
+      scopus: "https://www.scopus.com/authid/detail.uri?authorId=57213269077",
+      researchGate:
+        "https://www.researchgate.net/profile/Ifeyinwa-Obianyo/research",
+      orcid: "https://orcid.org/0009-0007-5184-3277",
+      webOfScience: "https://www.webofscience.com/wos/author/record/2243221",
+      publons: "https://publons.com/researcher/AAJ-6255-2021",
+    },
     projects: [
       {
         name: "Sustainable Construction Materials",
@@ -217,18 +232,101 @@ export default function SpeakerPage({ params }: { params: { slug: string } }) {
 
               {speaker.citations && (
                 <div>
-                  <h3 className="text-xl font-bold text-[#073b4c] mb-2">
-                    Citations
+                  <h3 className="text-xl font-bold text-[#073b4c] mb-4">
+                    Academic Profiles
                   </h3>
-                  <a
-                    href={speaker.citations}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#118ab2] hover:text-[#073b4c] inline-flex items-center group"
-                  >
-                    View Google Scholar Citations
-                    <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </a>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {speaker.citations.googleScholar && (
+                      <a
+                        href={speaker.citations.googleScholar}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            Google Scholar
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.scopus && (
+                      <a
+                        href={speaker.citations.scopus}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            Scopus
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.researchGate && (
+                      <a
+                        href={speaker.citations.researchGate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            ResearchGate
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.orcid && (
+                      <a
+                        href={speaker.citations.orcid}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            ORCID
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.webOfScience && (
+                      <a
+                        href={speaker.citations.webOfScience}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            Web of Science
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.publons && (
+                      <a
+                        href={speaker.citations.publons}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            Publons
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                  </div>
                 </div>
               )}
 
