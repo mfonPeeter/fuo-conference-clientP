@@ -130,7 +130,7 @@ With over 180 articles published in reputable international journals and six boo
     name: "Engr. Dr. Ifeyinwa Ijeoma Obianyo",
     title: "Department of Civil Engineering",
     institution: "Nile University of Nigeria",
-    role: "M.Eng. Thesis Coordinator",
+    role: "",
     image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG",
     bio: `Engr. Dr. Ifeyinwa Ijeoma Obianyo is a distinguished academic and researcher in the field of Civil Engineering at Nile University of Nigeria. She serves as the M.Eng. Thesis Coordinator and has made significant contributions to research in sustainable construction materials and environmental engineering.`,
     citations:
