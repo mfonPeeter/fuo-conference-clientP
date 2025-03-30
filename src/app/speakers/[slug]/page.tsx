@@ -107,9 +107,7 @@ Beyond her research endeavors, Dr. Afolayan is actively involved in professional
     institution: "Nile University of Nigeria",
     role: "Leader, Waste to Wealth Research Group",
     image: "/images/speakers/dr-adekunle-adeleke.png",
-    bio: `Dr. Adekunle A. Adeleke is a distinguished academic and researcher in the field of Mechanical Engineering, currently serving as the Head of the Department of Mechanical Engineering at Nile University of Nigeria, Abuja. Dr. Adeleke formerly served as the Chair of the Sustainable Development Goal 9 (Industry, Innovation, and Infrastructure) Research Team at Landmark University before moving to Nile University.
-
-With over 180 articles published in reputable international journals and six book chapters to his name, Dr. Adeleke has made substantial contributions to his field. He holds four patents from the Federal Republic of Nigeria and has been recognized as one of the top 50 researchers in Nigeria based on scholarly output by SciVal.`,
+    bio: `Dr. Adekunle A. Adeleke is a distinguished academic and researcher in the field of Mechanical Engineering, currently serving as the Head of the Department of Mechanical Engineering at Nile University of Nigeria, Abuja. Dr. Adeleke formerly served as the Chair of the Sustainable Development Goal 9 (Industry, Innovation, and Infrastructure) Research Team at Landmark University before moving to Nile University. With over 220 articles published in reputable international journals and Fourteen book chapters published to his name, Dr. Adeleke has made substantial contributions to his field. He holds five patents from the Federal Republic of Nigeria and has been recognized as one of the top 50 researchers in Nigeria based on scholarly output by SciVal.  He has consistently been named the TOPmost researcher of his university from 2022 till date and has led his team to become Best Research team among the 16 Honoria United Universities in Africa.`,
     projects: [
       {
         name: "Biomass Utilization",
