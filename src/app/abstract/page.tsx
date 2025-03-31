@@ -1,6 +1,4 @@
 import { ChevronRight, FileText, AlertCircle } from "lucide-react";
-import Image from "next/image";
-
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -167,14 +165,19 @@ export default function AbstractPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
-                <div className="relative w-full aspect-[1.414/1] mb-8">
-                  <Image
-                    src="/images/abstract/example-abstract.png"
-                    alt="Example Abstract Format"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
+                <div className="mb-6 rounded-2xl overflow-hidden h-48 relative">
+                  <a
+                    href="/images/abstract/abstract-template.png"
+                    download="abstract-template.png"
+                    className="w-full h-full flex items-center justify-center bg-[#118ab2]/5 hover:bg-[#118ab2]/10 transition-colors"
+                  >
+                    <div className="text-center">
+                      <FileText className="h-12 w-12 text-[#118ab2] mx-auto mb-2" />
+                      <span className="text-[#118ab2] font-medium">
+                        Download Abstract Template
+                      </span>
+                    </div>
+                  </a>
                 </div>
 
                 <div className="space-y-6 font-['Times_New_Roman']">

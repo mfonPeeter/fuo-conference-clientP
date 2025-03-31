@@ -33,7 +33,8 @@ const KeyInformation = () => {
             Key Information
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Everything you need to know about the Faculty of Science Conference
+            Everything you need to know about the American Chemical Society,
+            Federal University Otuoke Chapter Conference
           </p>
         </div>
 

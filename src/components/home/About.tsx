@@ -16,10 +16,10 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                The Faculty of Science Conference at Federal University Otuoke
-                presents a groundbreaking exploration of how green chemistry and
-                artificial intelligence can drive sustainable development in the
-                Niger Delta region.
+                The American Chemical Society, Federal University Otuoke Chapter
+                Conference presents a groundbreaking exploration of how green
+                chemistry and artificial intelligence can drive sustainable
+                development in the Niger Delta region.
               </p>
               <p>
                 Our conference will be held in a hybrid format from September

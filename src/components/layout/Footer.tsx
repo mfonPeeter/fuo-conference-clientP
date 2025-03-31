@@ -26,12 +26,12 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-xl font-bold">FUO Science Conference</h3>
+              <h3 className="text-xl font-bold">ACS FUO Conference</h3>
             </div>
             <p className="text-white/70 leading-relaxed">
-              The premier scientific conference at Federal University Otuoke,
-              bringing together researchers and scholars from various
-              disciplines.
+              The premier scientific conference of the American Chemical
+              Society, Federal University Otuoke Chapter, bringing together
+              researchers and scholars from various disciplines.
             </p>
           </div>
 
@@ -103,8 +103,8 @@ export default function Footer() {
       <div className="border-t border-white/10 py-8">
         <div className="container mx-auto px-4 text-center text-white/50">
           <p>
-            &copy; {new Date().getFullYear()} Faculty of Science Conference,
-            Federal University Otuoke. All rights reserved.
+            &copy; {new Date().getFullYear()} American Chemical Society, Federal
+            University Otuoke Chapter. All rights reserved.
           </p>
         </div>
       </div>

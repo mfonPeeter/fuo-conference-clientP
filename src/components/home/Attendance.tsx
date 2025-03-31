@@ -51,7 +51,8 @@ const Attendance = () => {
             <div className="text-white space-y-4">
               <p className="text-lg leading-relaxed">
                 Scholars are welcome from interdisciplinary institutions and
-                fields that relate to science and technology. We invite:
+                fields that relate to green chemistry, artificial intelligence
+                and sustainability. We invite:
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
                 {[
