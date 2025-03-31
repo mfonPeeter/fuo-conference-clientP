@@ -6,8 +6,9 @@ export interface RegistrationData {
   surname: string;
   otherNames: string;
   email: string;
-  whatsAppNo?: string;
-  otherPhoneNo?: string;
+  phoneNo: string;
+  registrationType: string;
+  registrationId: string;
 }
 
 export const encryptData = (data: RegistrationData): string => {

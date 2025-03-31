@@ -5,6 +5,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import dynamic from "next/dynamic";
 import { decryptData } from "@/utils/encryption";
+import {
+  getRegistrationFee,
+  formatCurrency,
+  type RegistrationType,
+} from "@/utils/pricing";
 
 // Dynamically import PaystackButton with no SSR
 const PaystackButton = dynamic(
@@ -16,7 +21,6 @@ const PaystackButton = dynamic(
 
 // Paystack configuration
 const PAYSTACK_PUBLIC_KEY = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "";
-const PAYMENT_AMOUNT = 500000; // Amount in kobo (₦5000.00)
 const EMAIL = "hod.chemistry@fuotuoke.edu.ng"; // Replace with actual email
 
 function PaymentContent() {
@@ -34,7 +38,10 @@ function PaymentContent() {
     }
   } catch (error) {
     console.error("Failed to decrypt registration data:", error);
-    toast.error("Invalid registration data. Please try registering again.");
+    toast.error("Invalid registration data. Please try registering again.", {
+      position: "top-center",
+      style: { background: "#FF3D00", border: "none", color: "white" },
+    });
     router.push("/register");
   }
 
@@ -45,32 +52,55 @@ function PaymentContent() {
     setReference(`CONF-${timestamp}-${random}`);
   }, []);
 
+  // Calculate payment amount based on registration type
+  const paymentAmount = parsedData?.registrationType
+    ? getRegistrationFee(parsedData.registrationType as RegistrationType) * 100 // Convert to kobo
+    : 0;
+
   // Paystack configuration
   const config = {
     reference,
     email: parsedData?.email || EMAIL,
-    amount: PAYMENT_AMOUNT,
+    amount: paymentAmount,
     publicKey: PAYSTACK_PUBLIC_KEY,
     text: "Pay Now",
     metadata: {
       custom_fields: [
         {
           display_name: "Full Name",
-          variable_name: "name",
+          variable_name: "full_name",
           value: parsedData?.surname + " " + parsedData?.otherNames,
         },
         {
           display_name: "Phone Number",
-          variable_name: "phone",
-          value: parsedData?.whatsAppNo || parsedData?.otherPhoneNo,
+          variable_name: "phone_number",
+          value: parsedData?.phoneNo,
+        },
+        {
+          display_name: "Registration Type",
+          variable_name: "registration_type",
+          value: parsedData?.registrationType,
         },
       ],
     },
-    onSuccess: () => {
+    onSuccess: async () => {
       toast.success("Payment successful! Redirecting...", {
         position: "top-center",
         style: { background: "#06D6A0", border: "none", color: "white" },
       });
+      // Update payment status in database after successful payment
+      await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/update-payment/${parsedData?.registrationId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            paid: true,
+          }),
+        }
+      );
       router.push(`/payment/success?ref=${reference}`);
     },
     onError: () => {
@@ -106,11 +136,12 @@ function PaymentContent() {
           <div className="bg-white/10 p-6 rounded-lg">
             <h3 className="text-lg font-semibold mb-4">Payment Details</h3>
             <div className="space-y-2">
-              <p>Amount: ₦{(PAYMENT_AMOUNT / 100).toLocaleString()}</p>
+              <p>Amount: {formatCurrency(paymentAmount / 100)}</p>
               <p>Email: {parsedData?.email || EMAIL}</p>
               <p>
-                Name: {parsedData?.surname} {parsedData?.otherNames}
+                Name: {parsedData?.surname}, {parsedData?.otherNames}
               </p>
+              <p>Registration Type: {parsedData?.registrationType}</p>
             </div>
           </div>
 
