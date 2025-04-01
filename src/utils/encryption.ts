@@ -7,6 +7,7 @@ export interface RegistrationData {
   otherNames: string;
   email: string;
   phoneNo: string;
+  whatsappNo: string;
   registrationType: string;
   registrationId: string;
 }
