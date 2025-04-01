@@ -14,7 +14,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           className={twMerge(
-            "h-[45px] w-full border-[0.75px] border-[#DDDDDD] bg-inherit py-[15px] pl-[22px] outline-none placeholder:text-white placeholder:opacity-[56%] rounded-md",
+            "h-[45px] py-[15px] pl-[22px] placeholder:text-white placeholder:opacity-[56%] rounded-md w-full bg-white/10 border border-white/20 text-white placeholder:text-white/80 focus:ring-white/10 focus:outline-none",
             className
           )}
           {...props}
@@ -36,7 +36,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
         <textarea
           ref={ref}
           className={twMerge(
-            "h-[115px] w-full resize-none border-[0.75px] border-[#DDDDDD] bg-inherit pl-[22px] pt-[15px] outline-none placeholder:text-white placeholder:opacity-[56%] rounded-md",
+            "h-[115px] resize-none pl-[22px] pt-[15px] placeholder:text-white placeholder:opacity-[56%] rounded-md w-full bg-white/10 border border-white/20 text-white placeholder:text-white/80 focus:ring-white/10 focus:outline-none",
             className
           )}
           {...props}
@@ -75,7 +75,7 @@ const FileUploadField = React.forwardRef<
         <div className="space-y-[23px]">
           <div className="space-y-[6px]">
             <span className={`block`}>{label}</span>
-            <div className="border-[0.75px] border-[#DDDDDD] px-[22px] py-4 rounded-md">
+            <div className="border px-[22px] py-4 rounded-md w-full bg-white/10 border-white/20 text-white placeholder:text-white/80 focus:ring-white/10">
               <label className="flex cursor-pointer items-center">
                 {!fileName ? (
                   <span className={`font-semibold`}>Click Here</span>
