@@ -32,9 +32,10 @@ export interface FormValues {
   otherNames: string;
   email: string;
   phoneNo: string;
+  whatsappNo: string;
   organization: string;
   registrationType: string;
-  abstractUrl: string; // URL of the uploaded abstract file
+  abstractUrl: string;
 }
 
 export default function RegisterPage() {
@@ -88,6 +89,7 @@ export default function RegisterPage() {
             abstract_link: data.abstractUrl,
             email: data.email,
             phone_number: data.phoneNo,
+            whatsapp_number: data.whatsappNo,
             organization: data.organization,
           }),
         }
@@ -112,6 +114,7 @@ export default function RegisterPage() {
           otherNames: data.otherNames,
           email: data.email,
           phoneNo: data.phoneNo,
+          whatsappNo: data.whatsappNo,
           registrationType: data.registrationType,
           registrationId: regId,
         });
@@ -235,6 +238,14 @@ export default function RegisterPage() {
                   name="phoneNo"
                   id="registerPhoneNo"
                   errorMessage={errors.phoneNo?.message}
+                />
+                <Input
+                  {...register("whatsappNo")}
+                  type="tel"
+                  placeholder="WhatsApp No."
+                  name="whatsappNo"
+                  id="registerWhatsappNo"
+                  className="sm:col-span-2"
                 />
               </div>
 

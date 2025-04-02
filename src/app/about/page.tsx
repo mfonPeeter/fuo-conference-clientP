@@ -233,7 +233,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
               <Image
-                src="/images/school.JPG"
+                src="/images/school.jpeg"
                 alt="Conference room"
                 fill
                 className="object-cover"

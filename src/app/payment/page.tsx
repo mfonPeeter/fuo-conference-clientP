@@ -74,7 +74,7 @@ function PaymentContent() {
         {
           display_name: "Phone Number",
           variable_name: "phone_number",
-          value: parsedData?.phoneNo,
+          value: parsedData?.phoneNo || parsedData?.whatsappNo,
         },
         {
           display_name: "Registration Type",

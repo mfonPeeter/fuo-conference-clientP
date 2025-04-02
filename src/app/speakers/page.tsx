@@ -74,10 +74,10 @@ export default function SpeakersPage() {
             <Link
               href={`/speakers/${speaker.slug}`}
               key={speaker.slug}
-              className="group"
+              className="group h-full"
             >
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
-                <div className="relative h-64 w-full">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105 h-full flex flex-col">
+                <div className="relative h-64 w-full flex-shrink-0">
                   <Image
                     src={speaker.image}
                     alt={speaker.name}
@@ -85,7 +85,7 @@ export default function SpeakersPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold text-[#073b4c] mb-2">
                     {speaker.name}
                   </h3>
@@ -95,7 +95,9 @@ export default function SpeakersPage() {
                   <p className="text-gray-600 text-sm mb-1">
                     {speaker.institution}
                   </p>
-                  <p className="text-gray-500 text-sm">{speaker.role}</p>
+                  <p className="text-gray-500 text-sm mt-auto">
+                    {speaker.role}
+                  </p>
                 </div>
               </div>
             </Link>
