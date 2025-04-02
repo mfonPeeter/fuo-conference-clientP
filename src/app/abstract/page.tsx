@@ -136,6 +136,45 @@ export default function AbstractPage() {
                 <Separator className="my-4" />
 
                 <div>
+                  <h3 className="font-bold text-[#073b4c] mb-4">
+                    Publication Opportunities
+                  </h3>
+                  <div className="bg-[#118ab2]/5 p-6 rounded-xl">
+                    <p className="text-gray-600 mb-4">
+                      We are pleased to inform all participants that accepted
+                      abstracts submitted for the conference will be collated
+                      and published in an open-access repository with a Digital
+                      Object Identifier (DOI). This ensures that your work is
+                      citable and accessible to the global research community.
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                      Furthermore, after the conference, selected high-quality
+                      abstracts and presentations will be invited for full paper
+                      submission to Scopus-indexed journals, including:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+                      <li>Discover Chemistry (Springer Nature)</li>
+                      <li>Scientific African (Elsevier)</li>
+                      <li>IOP Conference Series: Earth and Sustainability</li>
+                      <li>Journals of the American Chemical Society (ACS)</li>
+                    </ul>
+                    <p className="text-gray-600">
+                      Authors of outstanding contributions will be guided
+                      through the peer-review process of these reputable
+                      journals. We encourage all participants to prepare their
+                      submissions with the highest academic rigor and
+                      originality.
+                    </p>
+                    <p className="text-gray-600 mt-4">
+                      For inquiries regarding publication opportunities, please
+                      contact the organizing committee.
+                    </p>
+                  </div>
+                </div>
+
+                <Separator className="my-4" />
+
+                <div>
                   <h3 className="font-bold text-[#073b4c] mb-2">
                     Important Dates:
                   </h3>
