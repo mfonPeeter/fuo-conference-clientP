@@ -20,8 +20,7 @@ export function InternationalModal({
   onClose,
   registrationId,
 }: InternationalModalProps) {
-  //   const emailAddress = "hod.chemistry@fuotuoke.edu.ng";
-  const emailAddress = "godimfon@gmail.com";
+  const emailAddress = "hod.chemistry@fuotuoke.edu.ng";
   const subject = `International Payment for Conference - Registration ID: ${registrationId}`;
   const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
     subject
