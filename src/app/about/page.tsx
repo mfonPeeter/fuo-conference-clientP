@@ -243,6 +243,34 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* DEIR Policy */}
+      <section className="py-24 bg-[#f8fafc]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="inline-block mb-4 bg-[#118ab2]/10 text-[#118ab2] px-4 py-1.5 rounded-full text-sm font-medium">
+              Our Commitment
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#073b4c] mb-6 leading-tight">
+              DEIR Policy
+            </h2>
+            <div className="bg-white p-8 rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-gray-100">
+              <p className="text-gray-600 leading-relaxed">
+                At the ACS FUO Green Chemistry and AI Conference, we are
+                dedicated to fostering an environment that upholds{" "}
+                <span className="font-bold">
+                  Diversity, Equity, Inclusion, and Respect (DEIR)
+                </span>
+                . We welcome participants from diverse backgrounds, encourage
+                interdisciplinary collaboration, and ensure that all voices are
+                heard and valued. The conference will implement policies to
+                promote inclusivity, equitable opportunities, and respectful
+                engagement among all attendees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sub-Themes */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
