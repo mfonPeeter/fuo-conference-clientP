@@ -3,6 +3,14 @@ import Link from "next/link";
 
 const speakers = [
   {
+    name: "Prof. Nimibofa Ayawei",
+    title: "Secretary to the State Government",
+    institution: "Bayelsa State Government",
+    role: "Former Executive Chairman, Bayelsa State Board of Internal Revenue",
+    slug: "nimibofa-ayawei",
+    image: "/images/speakers/prof-nimibofa-ayawei.png", // Replace with actual image
+  },
+  {
     name: "Prof. Bamidele Adebisi",
     title: "Professor in Intelligent Infrastructure Systems",
     institution: "Manchester Metropolitan University",

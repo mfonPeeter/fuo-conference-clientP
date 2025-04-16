@@ -31,6 +31,38 @@ type SpeakerDetails = {
 };
 
 const speakerDetails: SpeakerDetails = {
+  "nimibofa-ayawei": {
+    name: "Prof. Nimibofa Ayawei",
+    title: "Secretary to the State Government",
+    institution: "Bayelsa State Government",
+    role: "Former Executive Chairman, Bayelsa State Board of Internal Revenue",
+    image: "/images/speakers/prof-nimibofa-ayawei.png",
+    bio: `Prof. Nimibofa Ayawei has a diverse background encompassing academia, public service, and political engagement. He currently serves as the Secretary to the State Government (SSG) of Bayelsa State. Prior to this appointment, he held the position of Executive Chairman of the Bayelsa State Board of Internal Revenue. His career includes experience as a former member of the Bayelsa State House of Assembly.
+
+Prof. Ayawei's research is strongly oriented towards sustainability, with a particular focus on environmental chemistry. His work addresses critical environmental issues, notably in wastewater treatment, environmental analysis, and environmental chemistry. Given his affiliations within the Niger Delta region, his research addresses the unique environmental challenges prevalent in that area.`,
+    projects: [
+      {
+        name: "Wastewater Treatment",
+        description:
+          "Research on methods to effectively remove contaminants from wastewater, including the application of adsorption techniques and utilization of various materials to enhance contaminant uptake.",
+      },
+      {
+        name: "Environmental Analysis",
+        description:
+          "Expertise in environmental analytical chemistry and environmental analysis, including investigation of Biochemical Oxygen Demand (BOD) in water bodies, a key indicator of water quality.",
+      },
+      {
+        name: "Environmental Chemistry",
+        description:
+          "Practical applications of environmental chemistry, focusing on mitigating environmental hazards and pollution, including research on silver nanoparticles from plant extracts for bactericidal purposes.",
+      },
+      {
+        name: "Regional Environmental Solutions",
+        description:
+          "Development of sustainable solutions for environmental problems in the Niger Delta region, with particular emphasis on water pollution and contamination as well as development of materials for pollutants remediation.",
+      },
+    ],
+  },
   "bamidele-adebisi": {
     name: "Prof. Bamidele Adebisi",
     title: "Professor in Intelligent Infrastructure Systems",
