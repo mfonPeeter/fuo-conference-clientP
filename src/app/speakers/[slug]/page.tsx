@@ -22,6 +22,8 @@ type Speaker = {
     orcid?: string;
     webOfScience?: string;
     publons?: string;
+    email?: string;
+    website?: string;
   };
   projects?: Project[];
 };
@@ -31,6 +33,48 @@ type SpeakerDetails = {
 };
 
 const speakerDetails: SpeakerDetails = {
+  "edu-inam": {
+    name: "Prof. Edu J. Inam",
+    title: "President, American Chemical Society (ACS) Nigeria Chapter",
+    institution: "University of Uyo",
+    role: "Head of Department of Chemistry",
+    image: "/images/speakers/prof-edu-inam.png",
+    bio: `Prof. Edu J. Inam is a full professor of Chemistry, currently serving as the Head of Department of Chemistry at University of Uyo and President of the American Chemical Society (ACS) Nigeria International Chemical Sciences Chapter. She is also the Director of the International Centre for Energy and Environmental Sustainability Research (ICEESR) and the immediate past Acting Director, Centre for Research and Development, University of Uyo.
+
+With over two decades of teaching and research experience across Africa, Asia, and Europe, Prof. Inam has made significant contributions to the field of environmental chemistry. Her research interests include water quality monitoring, risk assessment, and waste utilization. She has authored or co-authored over 70 research articles in high-impact scientific journals and has presented at numerous international conferences. Her work has garnered over 1,200 citations, reflecting her influence in the scientific community.
+
+Prof. Inam earned her Ph.D. in Chemistry from Loughborough University, United Kingdom, in 2005. She furthered her expertise with professional courses at the United Nations University in Tokyo, Japan, focusing on International Cooperation and Development, and Environmental Change: Managing Risks. In 2007, she was awarded a Korean Government Postdoctoral Fellowship at the International Environmental Research Center, Gwangju Institute of Science and Technology, South Korea. During her time in Korea, she also received the Schlumberger Faculty for the Future Scholarship, enabling her to continue her research for an additional two years.
+
+Prof. Inam played a pivotal role in establishing the ACS Nigeria International Chemical Sciences Chapter in 2015 and has been instrumental in its growth and development. She has organized and implemented various programs, including the Abuja Chemistry Festival and the ACS Nigeria Chapter Symposium Series, now in its tenth year. Her leadership extends to mentoring initiatives such as the Project SEED program and the University of Uyo ACS Student Chapter.
+
+Recognized for her expertise, Prof. Inam was invited to join the African regional expert team on the Global Chemicals Outlook II under the United Nations Environment Programme. Her international collaborations and consultancy roles with organizations like the World Bank and UNDP underscore her commitment to addressing global environmental challenges.`,
+    citations: {
+      email: "eduinam235@gmail.com",
+      website: "acsnigeria.org",
+    },
+    projects: [
+      {
+        name: "Water Quality Monitoring",
+        description:
+          "Research on water quality assessment and monitoring techniques for sustainable water resource management.",
+      },
+      {
+        name: "Environmental Risk Assessment",
+        description:
+          "Development of methodologies for assessing environmental risks and their impact on human health and ecosystems.",
+      },
+      {
+        name: "Waste Utilization",
+        description:
+          "Innovative approaches to waste management and utilization for environmental sustainability.",
+      },
+      {
+        name: "ACS Nigeria Chapter Leadership",
+        description:
+          "Leading the American Chemical Society Nigeria Chapter in promoting chemical sciences education and research.",
+      },
+    ],
+  },
   "nimibofa-ayawei": {
     name: "Prof. Nimibofa Ayawei",
     title: "Secretary to the State Government",
@@ -351,6 +395,34 @@ export default function SpeakerPage({ params }: { params: { slug: string } }) {
                         <div className="flex items-center justify-between">
                           <span className="text-[#118ab2] font-medium">
                             Publons
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.email && (
+                      <a
+                        href={`mailto:${speaker.citations.email}`}
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            Email
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
+                        </div>
+                      </a>
+                    )}
+                    {speaker.citations.website && (
+                      <a
+                        href={`https://${speaker.citations.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#118ab2] font-medium">
+                            Website
                           </span>
                           <ArrowUpRight className="h-4 w-4 text-[#118ab2]" />
                         </div>

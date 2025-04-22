@@ -11,6 +11,14 @@ const speakers = [
     image: "/images/speakers/prof-nimibofa-ayawei.png", // Replace with actual image
   },
   {
+    name: "Prof. Edu J. Inam",
+    title: "President, American Chemical Society (ACS) Nigeria Chapter",
+    institution: "University of Uyo",
+    role: "Head of Department of Chemistry",
+    slug: "edu-inam",
+    image: "/images/speakers/prof-edu-inam.png",
+  },
+  {
     name: "Prof. Bamidele Adebisi",
     title: "Professor in Intelligent Infrastructure Systems",
     institution: "Manchester Metropolitan University",
