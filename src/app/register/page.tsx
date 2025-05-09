@@ -3,14 +3,13 @@
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { encryptData } from "@/utils/encryption";
-import {
-  getRegistrationFee,
-  formatCurrency,
-  type RegistrationType,
-} from "@/utils/pricing";
+// import { encryptData } from "@/utils/encryption";
+import // getRegistrationFee,
+// formatCurrency,
+// type RegistrationType,
+"@/utils/pricing";
 import { useState } from "react";
-import { InternationalModal } from "@/components/registration/international-modal";
+// import { InternationalModal } from "@/components/registration/international-modal";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/form-fields";
@@ -39,29 +38,31 @@ export interface FormValues {
 }
 
 export default function RegisterPage() {
+  const router = useRouter();
+
   // Initialize form handling with react-hook-form
   const {
     register,
     handleSubmit,
     control,
-    watch,
+    // watch,
     setValue,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
   // State management for various UI states
-  const router = useRouter();
-  const [showInternationalModal, setShowInternationalModal] = useState(false);
-  const [registrationId, setRegistrationId] = useState<string>("");
+  // const router = useRouter();
+  // const [showInternationalModal, setShowInternationalModal] = useState(false);
+  // const [registrationId, setRegistrationId] = useState<string>("");
   const [uploadedFileName, setUploadedFileName] = useState<string>("");
 
   // Watch registration type for dynamic fee calculation
-  const registrationType = watch("registrationType") as RegistrationType;
+  // const registrationType = watch("registrationType") as RegistrationType;
 
   // Calculate registration fee based on type
-  const currentFee = registrationType
-    ? getRegistrationFee(registrationType)
-    : 0;
+  // const currentFee = registrationType
+  //   ? getRegistrationFee(registrationType)
+  //   : 0;
 
   // Handle form submission
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
@@ -99,28 +100,35 @@ export default function RegisterPage() {
         throw new Error("Registration failed");
       }
 
-      const result = await response.json();
-      const regId = result.id;
+      toast.success("Registration Successful. Redirecting...", {
+        position: "top-center",
+        style: { background: "#06D6A0", border: "none", color: "white" },
+      });
 
-      // Handle different registration flows based on type
-      if (data.registrationType === "International") {
-        // Show international payment modal
-        setRegistrationId(regId);
-        setShowInternationalModal(true);
-      } else {
-        // Encrypt data and redirect to payment page for non-international registrations
-        const registrationData = encryptData({
-          surname: data.surname,
-          otherNames: data.otherNames,
-          email: data.email,
-          phoneNo: data.phoneNo,
-          whatsappNo: data.whatsappNo,
-          registrationType: data.registrationType,
-          registrationId: regId,
-        });
+      router.push("/");
 
-        router.push(`/payment?data=${registrationData}`);
-      }
+      // const result = await response.json();
+      // const regId = result.id;
+
+      // // Handle different registration flows based on type
+      // if (data.registrationType === "International") {
+      //   // Show international payment modal
+      //   setRegistrationId(regId);
+      //   setShowInternationalModal(true);
+      // } else {
+      //   // Encrypt data and redirect to payment page for non-international registrations
+      //   const registrationData = encryptData({
+      //     surname: data.surname,
+      //     otherNames: data.otherNames,
+      //     email: data.email,
+      //     phoneNo: data.phoneNo,
+      //     whatsappNo: data.whatsappNo,
+      //     registrationType: data.registrationType,
+      //     registrationId: regId,
+      //   });
+
+      //   router.push(`/payment?data=${registrationData}`);
+      // }
     } catch (error: unknown) {
       // Error handling with user-friendly messages
       console.log(error);
@@ -156,12 +164,12 @@ export default function RegisterPage() {
 
   return (
     <>
-      {/* International payment modal */}
+      {/* International payment modal
       <InternationalModal
         isOpen={showInternationalModal}
         onClose={() => setShowInternationalModal(false)}
         registrationId={registrationId}
-      />
+      /> */}
 
       {/* Main registration form section */}
       <section className="py-24 flex justify-center">
@@ -292,12 +300,12 @@ export default function RegisterPage() {
                           ))}
                         </SelectContent>
                       </Select>
-                      {registrationType &&
+                      {/* {registrationType &&
                         registrationType !== "International" && (
                           <div className="text-sm text-white/80">
                             Registration Fee: {formatCurrency(currentFee)}
                           </div>
-                        )}
+                        )} */}
                     </div>
                   )}
                 />
