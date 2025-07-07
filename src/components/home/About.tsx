@@ -22,8 +22,8 @@ const About = () => {
                 development in the Niger Delta region.
               </p>
               <p>
-                Our conference will be held in a hybrid format from September
-                2-4, 2025, bringing together researchers, scientists, and
+                Our conference will be held in a hybrid format from November
+                4-7, 2025, bringing together researchers, scientists, and
                 innovators to share cutting-edge developments in environmentally
                 friendly chemical processes and AI applications.
               </p>

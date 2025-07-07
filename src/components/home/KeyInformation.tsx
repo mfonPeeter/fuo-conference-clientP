@@ -17,7 +17,7 @@ const importantDates = [
   },
   {
     heading: "Conference Dates",
-    timeframe: "September 2-4, 2025",
+    timeframe: "November 4-7, 2025",
   },
 ];
 

@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 z-10 relative sm:-top-1/2 sm:translate-y-[67%]">
         <div className="max-w-4xl">
           <div className="inline-block mb-6 bg-white/10 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
-            September 2nd-4th, 2025 • Federal University Otuoke
+            November 4-7, 2025 • Federal University Otuoke
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
             American Chemical Society Federal University Otuoke
