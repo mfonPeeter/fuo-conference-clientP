@@ -27,14 +27,6 @@ const speakers = [
     image: "/images/speakers/prof-bamidele-adebisi.png", // Replace with actual image
   },
   {
-    name: "Prof. Stephen A. Uzoekwe",
-    title: "Professor of Analytical-Environmental Chemistry",
-    institution: "Delta State University Abraka",
-    role: "Air Pollution and Forensic Science Expert",
-    slug: "stephen-uzoekwe",
-    image: "/images/speakers/prof-stephen-a-uzoekwe.png", // Replace with actual image
-  },
-  {
     name: "Prof. Charles O. Adetunji",
     title: "Professor of Microbiology",
     institution: "Edo State University Uzairue",
@@ -65,6 +57,14 @@ const speakers = [
     role: "",
     slug: "ifeyinwa-obianyo",
     image: "/images/speakers/engr-dr-ifeyinwa-ijeoma-obianyo.JPG", // Replace with actual image
+  },
+  {
+    name: "Prof. Olatunde Olatunji",
+    title: "Academic Leader for Research & Higher Degrees",
+    institution: "University of KwaZulu-Natal",
+    role: "School of Chemistry and Physics",
+    slug: "olatunde-olatunji",
+    image: "/images/speakers/prof-olatunde-olatunji.jpg", // Note: Image needs to be added
   },
 ];
 

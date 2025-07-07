@@ -77,10 +77,10 @@ const Attendance = () => {
 
               <div className="bg-white/10 backdrop-blur-md p-6 w-full rounded-2xl mt-8 border border-white/10">
                 <p className="text-[#FFD166] font-medium mb-2">
-                  Early bird (Ends May 2025)
+                  Early bird (Ends June 2025)
                 </p>
                 <p className="text-[#EF476F] font-medium">
-                  Late Registration: July 2025 onwards
+                  Late Registration: September 2025 onwards
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Attendance = () => {
                   <div className="space-y-4">
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Early Bird (until May)
+                        Early Bird (until June)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">
@@ -118,7 +118,7 @@ const Attendance = () => {
                     </div>
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Advanced (until July)
+                        Advanced (until September)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">

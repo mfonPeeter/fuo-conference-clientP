@@ -141,18 +141,6 @@ Beyond academia, he serves as a director and board member of the African Hydroge
       },
     ],
   },
-  "stephen-uzoekwe": {
-    name: "Prof. Stephen A. Uzoekwe",
-    title: "Professor of Analytical-Environmental Chemistry",
-    institution: "Delta State University Abraka",
-    role: "Air Pollution and Forensic Science Expert",
-    image: "/images/speakers/prof-stephen-a-uzoekwe.png",
-    bio: `Prof. Stephen Uzoekwe is a distinguished Nigerian environmental chemist and academic, currently serving a sabbatical appointment in the Department of Chemistry at the Delta State University Abraka.
-
-Prof. Uzoekwe's research primarily centers on environmental pollution assessment, health and ecological risk analysis. He has conducted significant studies on heavy metal contamination in various environmental matrices within Nigeria as well as air pollution risks and assessment in Bayelsa State, providing valuable insights into contamination and potential environmental hazards.
-
-Through his research and academic endeavors, Prof. Uzoekwe contributes to a deeper understanding of environmental challenges in Nigeria, aiding in the development of strategies for pollution management and ecological conservation. His work is instrumental in informing policy and promoting sustainable environmental practices within the region.`,
-  },
   "charles-adetunji": {
     name: "Prof. Charles O. Adetunji",
     title: "Professor of Microbiology",
@@ -239,6 +227,42 @@ Beyond her research endeavors, Dr. Afolayan is actively involved in professional
         name: "Waste Management in Construction",
         description:
           "Investigation of sustainable waste management practices in construction projects.",
+      },
+    ],
+  },
+  "olatunde-olatunji": {
+    name: "Prof. Olatunde Olatunji",
+    title: "Academic Leader for Research & Higher Degrees",
+    institution: "University of KwaZulu-Natal",
+    role: "School of Chemistry and Physics",
+    image: "/images/speakers/prof-olatunde-olatunji.jpg",
+    bio: `Prof. Olatunde Olatunji is a leading researcher and educator at the University of KwaZulu-Natal (UKZN), South Africa, where he serves as the Academic Leader for Research & Higher Degrees in the School of Chemistry and Physics. With a career spanning more than two decades, he has established himself as a prominent figure in sustainable chemistry and environmental technology.
+
+His research expertise encompasses a broad spectrum of critical areas including analytical methods, water and environmental science, renewable resource utilization, green chemistry, nanostructured materials, and heterogeneous photocatalysis. Prof. Olatunji's work is particularly notable for bridging cutting-edge photocatalysis and environmental remediation technology with data-driven tools, creating new opportunities for material synthesis, catalytic reaction optimization, and scalable green innovations.
+
+With over 100 peer-reviewed publications in high-impact journals and more than 2,000 citations, his research has significantly influenced the field of sustainable chemistry. His work has been featured in prestigious journals including Chemical Engineering Journal, RSC Environmental Science: Advances, Journal of Water Process Engineering, Applied Catalysis B: Environmental, and ChemSusChem.
+
+Beyond his research achievements, Prof. Olatunji is deeply committed to nurturing the next generation of African scientists. He has successfully supervised more than 20 Ph.D. and MSc students, contributing significantly to capacity building in sustainable chemistry across the continent.`,
+    projects: [
+      {
+        name: "Photocatalysis Research",
+        description:
+          "Development and optimization of heterogeneous photocatalysis systems for environmental remediation and green chemistry applications.",
+      },
+      {
+        name: "Nanostructured Materials",
+        description:
+          "Synthesis and functionalization of novel nanostructured materials for sustainable chemical processes and environmental technologies.",
+      },
+      {
+        name: "Water Treatment Technologies",
+        description:
+          "Innovation in water treatment and purification methods using sustainable and environmentally friendly approaches.",
+      },
+      {
+        name: "Green Chemistry Applications",
+        description:
+          "Development of cleaner chemical processes and sustainable technologies for industrial applications.",
       },
     ],
   },
