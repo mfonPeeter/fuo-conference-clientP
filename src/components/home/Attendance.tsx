@@ -5,33 +5,33 @@ const registrationFees = [
   {
     type: "Undergraduate",
     fees: {
-      earlyBird: { nigerian: "NGN 5,000", international: "$10" },
-      advanced: { nigerian: "NGN 7,500", international: "$15" },
-      late: { nigerian: "NGN 10,000", international: "$30" },
+      earlyBird: { nigerian: "NGN 4,000", international: "$10" },
+      standard: { nigerian: "NGN 5,000", international: "$15" },
+      late: { nigerian: "NGN 7,500", international: "$20" },
     },
   },
   {
     type: "Postgraduate",
     fees: {
-      earlyBird: { nigerian: "NGN 10,000", international: "$30" },
-      advanced: { nigerian: "NGN 15,000", international: "$25" },
-      late: { nigerian: "NGN 15,000", international: "$50" },
+      earlyBird: { nigerian: "NGN 8,000", international: "$20" },
+      standard: { nigerian: "NGN 10,000", international: "$25" },
+      late: { nigerian: "NGN 15,000", international: "$30" },
     },
   },
   {
     type: "Retirees",
     fees: {
-      earlyBird: { nigerian: "NGN 15,000", international: "$50" },
-      advanced: { nigerian: "NGN 20,000", international: "$60" },
-      late: { nigerian: "NGN 30,000", international: "$70" },
+      earlyBird: { nigerian: "NGN 10,000", international: "$40" },
+      standard: { nigerian: "NGN 15,000", international: "$50" },
+      late: { nigerian: "NGN 20,000", international: "$60" },
     },
   },
   {
     type: "All others",
     fees: {
-      earlyBird: { nigerian: "NGN 30,000", international: "$100" },
-      advanced: { nigerian: "NGN 35,000", international: "$110" },
-      late: { nigerian: "NGN 40,000", international: "$120" },
+      earlyBird: { nigerian: "NGN 20,000", international: "$100" },
+      standard: { nigerian: "NGN 30,000", international: "$100" },
+      late: { nigerian: "NGN 35,000", international: "$110" },
     },
   },
 ];
@@ -77,10 +77,13 @@ const Attendance = () => {
 
               <div className="bg-white/10 backdrop-blur-md p-6 w-full rounded-2xl mt-8 border border-white/10">
                 <p className="text-[#FFD166] font-medium mb-2">
-                  Early bird (Ends June 2025)
+                  Early Bird (until August 31)
+                </p>
+                <p className="text-white/80 font-medium mb-2">
+                  Standard Registration (September 1-30)
                 </p>
                 <p className="text-[#EF476F] font-medium">
-                  Late Registration: September 2025 onwards
+                  Late Registration (from October 1)
                 </p>
               </div>
             </div>
@@ -105,7 +108,7 @@ const Attendance = () => {
                   <div className="space-y-4">
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Early Bird (until June)
+                        Early Bird (until August 31)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">
@@ -118,20 +121,20 @@ const Attendance = () => {
                     </div>
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Advanced (until September)
+                        Standard (September 1-30)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">
-                          Nigerian: {category.fees.advanced.nigerian}
+                          Nigerian: {category.fees.standard.nigerian}
                         </p>
                         <p className="text-[#FFD166]">
-                          International: {category.fees.advanced.international}
+                          International: {category.fees.standard.international}
                         </p>
                       </div>
                     </div>
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Late Registration
+                        Late Registration (from October 1)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">
