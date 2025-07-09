@@ -54,7 +54,12 @@ function PaymentContent() {
 
   // Calculate payment amount based on registration type
   const paymentAmount = parsedData?.registrationType
-    ? getRegistrationFee(parsedData.registrationType as RegistrationType) * 100 // Convert to kobo
+    ? getRegistrationFee(
+        parsedData.registrationType as RegistrationType,
+        parsedData.registrationType === "International"
+          ? "International"
+          : "Nigerian"
+      ) * 100 // Convert to kobo
     : 0;
 
   // Paystack configuration
@@ -136,7 +141,15 @@ function PaymentContent() {
           <div className="bg-white/10 p-6 rounded-lg">
             <h3 className="text-lg font-semibold mb-4">Payment Details</h3>
             <div className="space-y-2">
-              <p>Amount: {formatCurrency(paymentAmount / 100)}</p>
+              <p>
+                Amount:{" "}
+                {formatCurrency(
+                  paymentAmount / 100,
+                  parsedData?.registrationType === "International"
+                    ? "International"
+                    : "Nigerian"
+                )}
+              </p>
               <p>Email: {parsedData?.email || EMAIL}</p>
               <p>
                 Name: {parsedData?.surname}, {parsedData?.otherNames}
