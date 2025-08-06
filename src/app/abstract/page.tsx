@@ -49,11 +49,11 @@ const formattingRequirements = [
 const importantDates = [
   {
     heading: "Abstract Submission Deadline",
-    timeframe: "July 30, 2025",
+    timeframe: "August  31, 2025",
   },
   {
     heading: "Notification of Acceptance",
-    timeframe: "Within 2 weeks of submission",
+    timeframe: "On rolling basis (usually within 2 weeks of submission)",
   },
   {
     heading: "Conference Dates",
@@ -148,15 +148,31 @@ export default function AbstractPage() {
                       citable and accessible to the global research community.
                     </p>
                     <p className="text-gray-600 mb-4">
-                      Furthermore, after the conference, selected high-quality
-                      abstracts and presentations will be invited for full paper
-                      submission to Scopus-indexed journals, including:
+                      Furthermore, authors can start submitting their full
+                      papers for publication in the following well-indexed
+                      journals:
                     </p>
                     <ul className="list-disc pl-5 space-y-2 text-gray-600 mb-4">
-                      <li>Discover Chemistry (Springer Nature)</li>
-                      <li>Scientific African (Elsevier)</li>
-                      <li>IOP Conference Series: Earth and Sustainability</li>
-                      <li>Journals of the American Chemical Society (ACS)</li>
+                      <li>
+                        <a
+                          href="https://link.springer.com/collections/jagggiiehi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Discover Chemistry (Springer Nature)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://iopscience.iop.org/collections/sstech-250407-817"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          IOP Sustainability Science and Technology Progress
+                          collection on Sustainability Research in Sub-Saharan
+                          -Africa.
+                        </a>
+                      </li>
                     </ul>
                     <p className="text-gray-600">
                       Authors of outstanding contributions will be guided
