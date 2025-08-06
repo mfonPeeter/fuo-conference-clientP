@@ -158,6 +158,7 @@ export default function AbstractPage() {
                           href="https://link.springer.com/collections/jagggiiehi"
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="underline hover:no-underline"
                         >
                           Discover Chemistry (Springer Nature)
                         </a>
@@ -167,6 +168,7 @@ export default function AbstractPage() {
                           href="https://iopscience.iop.org/collections/sstech-250407-817"
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="underline hover:no-underline"
                         >
                           IOP Sustainability Science and Technology Progress
                           collection on Sustainability Research in Sub-Saharan
