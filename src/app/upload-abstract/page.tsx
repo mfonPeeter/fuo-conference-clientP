@@ -34,10 +34,10 @@ export interface FormValues {
   whatsappNo: string;
   organization: string;
   registrationType: string;
-  paymentReceiptUrl: string;
+  abstractUrl: string;
 }
 
-export default function RegisterPage() {
+export default function UploadAbstractPage() {
   const router = useRouter();
 
   // Initialize form handling with react-hook-form
@@ -67,18 +67,18 @@ export default function RegisterPage() {
   // Handle form submission
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      // Validate payment receipt upload
-      if (!data.paymentReceiptUrl) {
-        toast.error("Please upload your payment receipt.", {
+      // Validate abstract upload
+      if (!data.abstractUrl) {
+        toast.error("Please upload your abstract.", {
           position: "top-center",
           style: { background: "#FF3D00", border: "none", color: "white" },
         });
         return;
       }
 
-      // API call to register user
+      // API call to submit abstract
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/register`,
+        `${process.env.NEXT_PUBLIC_API_URL}/upload-abstract`,
         {
           method: "POST",
           headers: {
@@ -87,7 +87,7 @@ export default function RegisterPage() {
           body: JSON.stringify({
             name: `${data.surname}, ${data.otherNames}`,
             registration_type: data.registrationType,
-            payment_receipt: data.paymentReceiptUrl,
+            abstract_link: data.abstractUrl,
             email: data.email,
             phone_number: data.phoneNo,
             whatsapp_number: data.whatsappNo,
@@ -97,10 +97,10 @@ export default function RegisterPage() {
       );
 
       if (!response.ok) {
-        throw new Error("Registration failed");
+        throw new Error("Abstract submission failed");
       }
 
-      toast.success("Registration Successful. Redirecting...", {
+      toast.success("Abstract uploaded successfully. Redirecting...", {
         position: "top-center",
         style: { background: "#06D6A0", border: "none", color: "white" },
       });
@@ -152,10 +152,10 @@ export default function RegisterPage() {
   ) => {
     if (res) {
       // Store the file URL and name
-      setValue("paymentReceiptUrl", res[0].ufsUrl);
+      setValue("abstractUrl", res[0].ufsUrl);
       setUploadedFileName(res[0].name);
       // Show success message
-      toast.success("Payment receipt uploaded successfully!", {
+      toast.success("Abstract uploaded successfully!", {
         position: "top-center",
         style: { background: "#06D6A0", border: "none", color: "white" },
       });
@@ -171,26 +171,25 @@ export default function RegisterPage() {
         registrationId={registrationId}
       /> */}
 
-      {/* Main registration form section */}
+      {/* Main abstract upload form section */}
       <section className="py-24 flex justify-center">
         <div className="mx-4 bg-gradient-to-r from-[#073b4c] to-[#118ab2] px-4 py-[75px] text-white sm:mx-0 sm:px-10 lg:px-[73px] rounded-xl">
           {/* Header section */}
           <div className="mb-[30px] flex max-w-[537px] flex-col items-center text-center">
             <div className="inline-block mb-2 bg-[#118ab2]/30 text-white px-4 py-1.5 rounded-full text-sm font-medium">
-              Register
+              Upload Abstract
             </div>
             <h2 className="mb-4 text-[26px] font-semibold leading-8">
               Green Chemistry and Artificial Intelligence for Sustainable
               Development
             </h2>
             <p className="text-sm font-medium">
-              Register for the conference by uploading your payment receipt. For
-              each field for document/file upload, ensure that each of your file
-              size is not more than 10 MB.
+              Upload your abstract for the conference. Ensure that your abstract
+              follows our guidelines and your file size is not more than 10 MB.
             </p>
           </div>
 
-          {/* Registration form */}
+          {/* Abstract upload form */}
           <div>
             <form
               noValidate
@@ -206,7 +205,7 @@ export default function RegisterPage() {
                   type="text"
                   placeholder="Your surname*"
                   name="surname"
-                  id="registerSurname"
+                  id="abstractSurname"
                   errorMessage={errors.surname?.message}
                 />
                 <Input
@@ -216,7 +215,7 @@ export default function RegisterPage() {
                   type="text"
                   placeholder="Other names*"
                   name="otherNames"
-                  id="registerOtherNames"
+                  id="abstractOtherNames"
                   errorMessage={errors.otherNames?.message}
                 />
                 <Input
@@ -230,7 +229,7 @@ export default function RegisterPage() {
                   type="email"
                   placeholder="Email*"
                   name="email"
-                  id="contactEmail"
+                  id="abstractEmail"
                   errorMessage={errors.email?.message}
                 />
                 <Input
@@ -244,7 +243,7 @@ export default function RegisterPage() {
                   type="tel"
                   placeholder="Phone No.*"
                   name="phoneNo"
-                  id="registerPhoneNo"
+                  id="abstractPhoneNo"
                   errorMessage={errors.phoneNo?.message}
                 />
                 <Input
@@ -252,7 +251,7 @@ export default function RegisterPage() {
                   type="tel"
                   placeholder="WhatsApp No."
                   name="whatsappNo"
-                  id="registerWhatsappNo"
+                  id="abstractWhatsappNo"
                   className="sm:col-span-2"
                 />
               </div>
@@ -264,7 +263,7 @@ export default function RegisterPage() {
                   type="text"
                   placeholder="Affiliation (Institution/Organization and Department)"
                   name="organization"
-                  id="registerOrganization"
+                  id="abstractOrganization"
                   className="sm:col-span-2"
                 />
 
@@ -313,12 +312,13 @@ export default function RegisterPage() {
                 {/* File upload section */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white">
-                    Upload your payment receipt (PNG, JPG, JPEG, etc.)*
+                    Upload your abstract that is in compliance with our abstract
+                    guidelines*
                   </label>
                   <div className="relative">
                     {/* UploadThing button component */}
                     <UploadButton
-                      endpoint="paymentReceiptUploader"
+                      endpoint="abstractUploader"
                       onClientUploadComplete={handleUploadComplete}
                       onUploadError={(error: Error) => {
                         toast.error(`ERROR! ${error.message}`, {
@@ -378,12 +378,12 @@ export default function RegisterPage() {
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       ></path>
                     </svg>
-                    Sending...
+                    Uploading...
                   </>
                 ) : (
                   // Normal state
                   <>
-                    <Send className="mr-2 h-5 w-5" /> Register
+                    <Send className="mr-2 h-5 w-5" /> Upload Abstract
                   </>
                 )}
               </Button>

@@ -4,10 +4,12 @@ import Attendance from "@/components/home/Attendance";
 import CTA from "@/components/home/CTA";
 import About from "@/components/home/About";
 import Speakers from "@/components/home/speakers/Speakers";
+import HeroSection from "@/components/layout/HeroSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f8fafc]">
+      <HeroSection />
       {/* Countdown Section */}
       <section className="py-16 bg-[#f8fafc] -mt-1">
         <div className="container mx-auto px-4">

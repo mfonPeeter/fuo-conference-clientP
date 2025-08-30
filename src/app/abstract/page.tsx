@@ -315,10 +315,10 @@ export default function AbstractPage() {
             </Alert>
 
             <Link
-              href="/register"
+              href="/upload-abstract"
               className="inline-flex items-center text-[#118ab2] font-medium hover:text-[#073b4c] mt-4 group"
             >
-              Head to the register page to upload your abstract
+              Head to the upload abstract page to submit your abstract
               <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

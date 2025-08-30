@@ -17,6 +17,18 @@ export const ourFileRouter = {
     // Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
     return { fileUrl: file.ufsUrl };
   }),
+  paymentReceiptUploader: f({
+    image: {
+      maxFileSize: "16MB",
+      maxFileCount: 1,
+    },
+  }).onUploadComplete(async ({ file }) => {
+    // This code RUNS ON YOUR SERVER after upload
+    console.log("payment receipt file url", file.ufsUrl);
+
+    // Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
+    return { fileUrl: file.ufsUrl };
+  }),
 } satisfies FileRouter;
 
 export type OurFileRouter = typeof ourFileRouter;

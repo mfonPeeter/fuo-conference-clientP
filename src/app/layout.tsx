@@ -3,7 +3,6 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar";
-import HeroSection from "@/components/layout/HeroSection";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -54,7 +53,6 @@ export default function RootLayout({
       <body className="antialiased">
         <Toaster />
         <Navbar />
-        <HeroSection />
         <main>{children}</main>
         <Footer />
       </body>

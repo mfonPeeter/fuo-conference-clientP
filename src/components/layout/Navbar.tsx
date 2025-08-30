@@ -84,19 +84,33 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Register Button */}
-          <Link href="/register">
-            <Button
-              className={cn(
-                "hidden md:flex rounded-full transition-all duration-300",
-                scrolled
-                  ? "bg-[#06D6A0] hover:bg-[#05c090] text-[#073b4c]"
-                  : "bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/20"
-              )}
-            >
-              Register
-            </Button>
-          </Link>
+          {/* Action Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Link href="/upload-abstract">
+              <Button
+                className={cn(
+                  "rounded-full transition-all duration-300",
+                  scrolled
+                    ? "bg-[#118ab2] hover:bg-[#0f7a9b] text-white"
+                    : "bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/20"
+                )}
+              >
+                Upload Abstract
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button
+                className={cn(
+                  "rounded-full transition-all duration-300",
+                  scrolled
+                    ? "bg-[#06D6A0] hover:bg-[#05c090] text-[#073b4c]"
+                    : "bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/20"
+                )}
+              >
+                Register
+              </Button>
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -138,7 +152,12 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="p-4">
+            <div className="p-4 space-y-3">
+              <Link href="/upload-abstract">
+                <Button className="w-full bg-[#118ab2] hover:bg-[#0f7a9b] text-white rounded-full">
+                  Upload Abstract
+                </Button>
+              </Link>
               <Link href="/register">
                 <Button className="w-full bg-[#06D6A0] hover:bg-[#05c090] text-[#073b4c] rounded-full">
                   Register
