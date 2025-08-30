@@ -78,7 +78,7 @@ export default function UploadAbstractPage() {
 
       // API call to submit abstract
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/upload-abstract`,
+        `${process.env.NEXT_PUBLIC_API_URL}/register`,
         {
           method: "POST",
           headers: {
