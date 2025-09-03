@@ -165,7 +165,11 @@ A serial multiple award/grant-winning scholar in biodiversity conservation resea
 
 Her expertise is supported by high-impact publications, numerous postgraduate and undergraduate supervisions, and participation in global initiatives on biodiversity informatics. She is also committed to capacity building through various academic leadership roles and global fellowships. She is a Darwin Scholar, LEAD Fellow, Fellow of the Linnaean Society of London (FLS) and Institute of Security Nigeria and an active member of several professional bodies including the American Society of Plant Systematics, USA, Botanical Society of America, Botanical Society of Nigeria, Organization for Women in Science for the Developing World and Nigerian Young Academy. She is currently the Team Lead – Terrestrial Biodiversity Conservation Cluster at the TETFund Centre of Excellence in Biodiversity Conservation and Ecosystem Management, UNILAG.
 
-Prof. Onuminya is a dynamic, proactive and resilient individual with a strong personality based on integrity and trust. She is an advocate of the UN SDGs 3, 11, 12, 13, and 15. She is the current President (First Female) of the Nigerian Young Academy.`,
+Prof. Onuminya is a dynamic, proactive and resilient individual with a strong personality based on integrity and trust. She is an advocate of the UN SDGs 3, 11, 12, 13, and 15. She is the current President (First Female) of the Nigerian Young Academy.
+
+As NYA President, Prof. Onuminya leads national efforts to strengthen research integrity, early-career mentorship, and evidence-informed policymaking, while amplifying interdisciplinary collaboration for sustainability.
+
+At this conference, Prof. Onuminya will share insights on biodiversity conservation and molecular systematics as enablers of sustainable development, highlighting practical pathways for safeguarding genetic resources in the Niger Delta and beyond.`,
     citations: {
       orcid: "https://orcid.org/0000-0003-3794-7700",
       researchGate: "https://www.researchgate.net/profile/Temitope_Onuminya",
