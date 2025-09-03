@@ -49,7 +49,7 @@ const formattingRequirements = [
 const importantDates = [
   {
     heading: "Abstract Submission Deadline",
-    timeframe: "August  31, 2025",
+    timeframe: "September  30, 2025",
   },
   {
     heading: "Notification of Acceptance",

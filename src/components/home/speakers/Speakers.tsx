@@ -24,19 +24,7 @@ const Speakers = () => {
           </p>
         </div>
 
-        <div className="text-center mt-12">
-          <Link href="/speakers">
-            <Button
-              variant="outline"
-              className="border-[#118ab2] text-[#118ab2] hover:bg-[#118ab2]/5 rounded-full px-8 group"
-            >
-              View All Speakers
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           <SpeakerCard
             name="Prof. Nimibofa Ayawei"
             role="Secretary to the State Government"
@@ -49,6 +37,24 @@ const Speakers = () => {
             institution="University of Uyo"
             imageUrl="/images/speakers/prof-edu-inam.png"
           />
+          <SpeakerCard
+            name="Prof. Temitope Olabisi Onuminya FLS, FLEAD, FISN, MNYA"
+            role="President, Nigerian Young Academy"
+            institution="University of Lagos"
+            imageUrl="/images/speakers/prof-temitope-onuminya.jpg"
+          />
+        </div>
+
+        <div className="text-center">
+          <Link href="/speakers">
+            <Button
+              variant="outline"
+              className="border-[#118ab2] text-[#118ab2] hover:bg-[#118ab2]/5 rounded-full px-8 group"
+            >
+              View All Speakers
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

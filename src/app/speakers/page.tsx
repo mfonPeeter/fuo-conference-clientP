@@ -66,6 +66,14 @@ const speakers = [
     slug: "olatunde-olatunji",
     image: "/images/speakers/prof-olatunde-olatunji.jpg", // Note: Image needs to be added
   },
+  {
+    name: "Prof. Temitope Olabisi Onuminya FLS, FLEAD, FISN, MNYA",
+    title: "President, Nigerian Young Academy",
+    institution: "University of Lagos",
+    role: "Professor of Plant Systematics and Conservation",
+    slug: "temitope-onuminya",
+    image: "/images/speakers/prof-temitope-onuminya.jpg",
+  },
 ];
 
 export default function SpeakersPage() {
