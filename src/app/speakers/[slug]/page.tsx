@@ -153,6 +153,29 @@ He has won several scientific awards and grants from renowned academic bodies an
 
 He is presently a series editor with Wiley and Sons, Elsevier, Springer, Taylor and Francis, USA and many others editing several textbooks. He has participated in more than 100 international scientific conferences and workshops which include Invited talk, Plenary speaker, Keynote speaker, Chief panelist, Lead guest speaker, Chairs of Sessions, and Judges of poster in different continents.`,
   },
+  "temitope-onuminya": {
+    name: "Prof. Temitope Olabisi Onuminya FLS, FLEAD, FISN, MNYA",
+    title: "President, Nigerian Young Academy",
+    institution: "University of Lagos",
+    role: "Professor of Plant Systematics and Conservation",
+    image: "/images/speakers/prof-temitope-onuminya.jpg",
+    bio: `Prof. Temitope Olabisi Onuminya is a Professor of Plant Systematics and Conservation with the aim of providing evidence-based solutions for a sustainable environment. With over 15 years of experience in Molecular Systematics, DNA barcoding, Ethnobotany, and Environmental sustainability; her research emphasizes the conservation of plant genetic resources, forensic botany, and the integration of biotechnology into biodiversity conservation efforts. She has over 15 years of experience in human resources development, stakeholder engagement, products and services exhibition planning and coordination.
+
+A serial multiple award/grant-winning scholar in biodiversity conservation research, Prof. Onuminya has led and collaborated on national and international research grants supporting works on endangered species, allergenic pollen, and plant biodiversity in urban and rural Nigeria. She is passionate about integrating science with public health and environmental resilience.
+
+Her expertise is supported by high-impact publications, numerous postgraduate and undergraduate supervisions, and participation in global initiatives on biodiversity informatics. She is also committed to capacity building through various academic leadership roles and global fellowships. She is a Darwin Scholar, LEAD Fellow, Fellow of the Linnaean Society of London (FLS) and Institute of Security Nigeria and an active member of several professional bodies including the American Society of Plant Systematics, USA, Botanical Society of America, Botanical Society of Nigeria, Organization for Women in Science for the Developing World and Nigerian Young Academy. She is currently the Team Lead – Terrestrial Biodiversity Conservation Cluster at the TETFund Centre of Excellence in Biodiversity Conservation and Ecosystem Management, UNILAG.
+
+Prof. Onuminya is a dynamic, proactive and resilient individual with a strong personality based on integrity and trust. She is an advocate of the UN SDGs 3, 11, 12, 13, and 15. She is the current President (First Female) of the Nigerian Young Academy.`,
+    citations: {
+      orcid: "https://orcid.org/0000-0003-3794-7700",
+      researchGate: "https://www.researchgate.net/profile/Temitope_Onuminya",
+      googleScholar:
+        "https://scholar.google.com/citations?hl=en&user=RXZrUZIAAAAJ",
+      scopus: "https://www.scopus.com/authid/detail.uri?authorId=57201386722",
+      website: "www.linkedin.com/in/temitope-onuminya-a15185a8",
+    },
+    projects: [],
+  },
   "adedotun-afolayan": {
     name: "Dr. Adedotun Afolayan",
     title: "Assistant Director",
@@ -265,29 +288,6 @@ Beyond his research achievements, Prof. Olatunji is deeply committed to nurturin
           "Development of cleaner chemical processes and sustainable technologies for industrial applications.",
       },
     ],
-  },
-  "temitope-onuminya": {
-    name: "Prof. Temitope Olabisi Onuminya FLS, FLEAD, FISN, MNYA",
-    title: "President, Nigerian Young Academy",
-    institution: "University of Lagos",
-    role: "Professor of Plant Systematics and Conservation",
-    image: "/images/speakers/prof-temitope-onuminya.jpg",
-    bio: `Prof. Temitope Olabisi Onuminya is a Professor of Plant Systematics and Conservation with the aim of providing evidence-based solutions for a sustainable environment. With over 15 years of experience in Molecular Systematics, DNA barcoding, Ethnobotany, and Environmental sustainability; her research emphasizes the conservation of plant genetic resources, forensic botany, and the integration of biotechnology into biodiversity conservation efforts. She has over 15 years of experience in human resources development, stakeholder engagement, products and services exhibition planning and coordination.
-
-A serial multiple award/grant-winning scholar in biodiversity conservation research, Prof. Onuminya has led and collaborated on national and international research grants supporting works on endangered species, allergenic pollen, and plant biodiversity in urban and rural Nigeria. She is passionate about integrating science with public health and environmental resilience.
-
-Her expertise is supported by high-impact publications, numerous postgraduate and undergraduate supervisions, and participation in global initiatives on biodiversity informatics. She is also committed to capacity building through various academic leadership roles and global fellowships. She is a Darwin Scholar, LEAD Fellow, Fellow of the Linnaean Society of London (FLS) and Institute of Security Nigeria and an active member of several professional bodies including the American Society of Plant Systematics, USA, Botanical Society of America, Botanical Society of Nigeria, Organization for Women in Science for the Developing World and Nigerian Young Academy. She is currently the Team Lead – Terrestrial Biodiversity Conservation Cluster at the TETFund Centre of Excellence in Biodiversity Conservation and Ecosystem Management, UNILAG.
-
-Prof. Onuminya is a dynamic, proactive and resilient individual with a strong personality based on integrity and trust. She is an advocate of the UN SDGs 3, 11, 12, 13, and 15. She is the current President (First Female) of the Nigerian Young Academy.`,
-    citations: {
-      orcid: "https://orcid.org/0000-0003-3794-7700",
-      researchGate: "https://www.researchgate.net/profile/Temitope_Onuminya",
-      googleScholar:
-        "https://scholar.google.com/citations?hl=en&user=RXZrUZIAAAAJ",
-      scopus: "https://www.scopus.com/authid/detail.uri?authorId=57201386722",
-      website: "www.linkedin.com/in/temitope-onuminya-a15185a8",
-    },
-    projects: [],
   },
 };
 

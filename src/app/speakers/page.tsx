@@ -35,6 +35,14 @@ const speakers = [
     image: "/images/speakers/prof-charles-o-adetunji.png", // Replace with actual image
   },
   {
+    name: "Prof. Temitope Olabisi Onuminya FLS, FLEAD, FISN, MNYA",
+    title: "President, Nigerian Young Academy",
+    institution: "University of Lagos",
+    role: "Professor of Plant Systematics and Conservation",
+    slug: "temitope-onuminya",
+    image: "/images/speakers/prof-temitope-onuminya.jpg",
+  },
+  {
     name: "Dr. Adedotun Afolayan",
     title: "Assistant Director",
     institution: "National Centre for Genetic Resources and Biotechnology",
@@ -65,14 +73,6 @@ const speakers = [
     role: "School of Chemistry and Physics",
     slug: "olatunde-olatunji",
     image: "/images/speakers/prof-olatunde-olatunji.jpg", // Note: Image needs to be added
-  },
-  {
-    name: "Prof. Temitope Olabisi Onuminya FLS, FLEAD, FISN, MNYA",
-    title: "President, Nigerian Young Academy",
-    institution: "University of Lagos",
-    role: "Professor of Plant Systematics and Conservation",
-    slug: "temitope-onuminya",
-    image: "/images/speakers/prof-temitope-onuminya.jpg",
   },
 ];
 
