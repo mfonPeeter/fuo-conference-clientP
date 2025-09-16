@@ -293,6 +293,50 @@ Beyond his research achievements, Prof. Olatunji is deeply committed to nurturin
       },
     ],
   },
+  "halleluyah-aworinde": {
+    name: "Dr. Halleluyah Oluwatobi Aworinde",
+    title: "HANT Postdoctoral Research Fellow",
+    institution: "Durban University of Technology, South Africa",
+    role: "Department of Information Technology",
+    image: "/images/speakers/dr-halleluyah-aworinde.jpg",
+    bio: `Dr. Halleluyah Oluwatobi Aworinde is a Harnessing Talent (HANT) Postdoctoral Research Fellow at the Department of Information Technology, Durban University of Technology, South Africa. He holds a PhD in Computer Science from Ladoke Akintola University of Technology, Nigeria, and has built a distinguished academic career that bridges research, teaching, and technology leadership. Until 2025, he served as the 5th Director of Digital Services (ICT) at Bowen University, Nigeria, where he spearheaded digital transformation initiatives that modernized teaching, research, and administrative processes. He is a member of the Nigerian Young Academy (NYA).
+
+His research stands in the intersection of cognitive and persuasive computing, with applications in healthcare, agriculture, education, and security systems. He has published extensively in high-impact, Scopus- and Web of Science-indexed journals and contributed to globally recognized book chapters with Elsevier, Taylor & Francis, CRC Press, and IGI Global.
+
+Dr. Aworinde is also a recipient of prestigious fellowships and awards, including the 8th Heidelberg Laureate Forum (Germany), ICTP Visiting Research Fellowship (Italy), and the Klaus Tschira Stiftung Alumnode Project Fund (Germany). His academic excellence has been recognized with Best Paper and Poster Prizes at international conferences, including the Deep Learning Indaba and IIT Bhilai's ISMS conference.
+
+A passionate advocate for capacity building and inclusion in STEM, he has led training programs and mentorship initiatives with organizations such as AI+ Campus, Mendeley, Data Science Africa, and Deep Learning Indaba. He has also played an active role in shaping Nigeria's National Artificial Intelligence Policy through NITDA.
+
+Internationally, Dr. Aworinde has delivered invited talks and workshops across Europe, North America, East Africa, and South Africa, including contributions at The Alan Turing Institute (UK), Dalhousie University (Canada), and ICTP Trieste (Italy). His cross-border collaborations exemplify science diplomacy, advancing Africa's voice in global AI and digital innovation.
+
+Dr. Aworinde continues to push the frontiers of research while ensuring practical societal impact. His vision combines cutting-edge research with inclusive policy advocacy and international collaboration, making him a leading voice in Africa's growing AI and digital transformation landscape.`,
+    citations: {
+      scopus: "https://www.scopus.com/authid/detail.uri?authorId=57964446500",
+      googleScholar:
+        "https://scholar.google.com/citations?hl=en&authuser=4&user=73MEBUMAAAAJ",
+      website: "linkedin.com/in/halleluyah/",
+    },
+    projects: [],
+  },
+  "ushaseer-tembe": {
+    name: "Ushaseer Tembe",
+    title: "Founder & CEO of ProdCycle Limited",
+    institution: "ProdCycle Limited",
+    role: "Founder and CEO of AI Peers",
+    image: "/images/speakers/ushaseer-tembe.jpg",
+    bio: `Ushaseer Tembe holds a B.Sc. in Industrial Physics (First Class Honours) and an M.Sc. in Advanced 2D Materials (First Class Honours), where his thesis focused on the photocatalytic properties of 2D materials using MXenes as co-catalysts. Building on this solid scientific foundation, he transitioned into the world of product development, working across diverse industries to design and scale innovative solutions.
+
+His journey naturally evolved into Artificial Intelligence, where he helps organizations apply AI across research, education, business, and product innovation. He is the Founder & CEO of ProdCycle Limited, a product-centric, AI-inclusive company; Founder and CEO of AI Peers, a community-driven AI learning and collaboration platform; and creator of Dhaily, a digital finance tool designed to support small businesses.
+
+Through this blend of academic research, industry practice, and entrepreneurial leadership, Ushaseer bridges the gap between science, innovation, and AI-driven sustainable development.
+
+**Workshop Topic: AI as a Catalyst for Research, Innovation, and Sustainable Development**
+
+The interactive workshop, facilitated by Mr. Ushaseer Tembe will engage participants in exploring how Artificial Intelligence can be applied as a practical tool for research, product innovation, and sustainability. Going beyond theory, the session will include demonstrations of AI-driven applications that optimize green chemistry processes, streamline product development, and open access to advanced research tools.
+
+Participants will work through real-world case examples, with a focus on challenges and opportunities in the Niger Delta, to identify how AI can be harnessed to create impact-driven, sustainable solutions. By the end of the workshop, attendees will leave with clear pathways, hands-on knowledge, and collaborative ideas for integrating AI into their research and innovation practices—directly advancing the conference vision of combining green chemistry and AI for a better future.`,
+    projects: [],
+  },
 };
 
 export default function SpeakerPage({ params }: { params: { slug: string } }) {

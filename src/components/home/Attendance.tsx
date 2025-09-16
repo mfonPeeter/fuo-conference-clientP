@@ -77,13 +77,13 @@ const Attendance = () => {
 
               <div className="bg-white/10 backdrop-blur-md p-6 w-full rounded-2xl mt-8 border border-white/10">
                 <p className="text-[#FFD166] font-medium mb-2">
-                  Early Bird (until August 31)
+                  Early Bird (until September 30)
                 </p>
                 <p className="text-white/80 font-medium mb-2">
-                  Standard Registration (September 1-30)
+                  Standard Registration (October 1-15)
                 </p>
                 <p className="text-[#EF476F] font-medium">
-                  Late Registration (from October 1)
+                  Registration Deadline: October 15
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const Attendance = () => {
                   <div className="space-y-4">
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Early Bird (until August 31)
+                        Early Bird (until September 30)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">
@@ -121,7 +121,7 @@ const Attendance = () => {
                     </div>
                     <div>
                       <p className="text-white/80 text-sm mb-2">
-                        Standard (September 1-30)
+                        Standard (October 1-15)
                       </p>
                       <div className="flex justify-between">
                         <p className="text-[#FFD166]">
@@ -129,19 +129,6 @@ const Attendance = () => {
                         </p>
                         <p className="text-[#FFD166]">
                           International: {category.fees.standard.international}
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="text-white/80 text-sm mb-2">
-                        Late Registration (from October 1)
-                      </p>
-                      <div className="flex justify-between">
-                        <p className="text-[#FFD166]">
-                          Nigerian: {category.fees.late.nigerian}
-                        </p>
-                        <p className="text-[#FFD166]">
-                          International: {category.fees.late.international}
                         </p>
                       </div>
                     </div>

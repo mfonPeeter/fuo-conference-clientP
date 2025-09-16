@@ -175,7 +175,7 @@ export default function RegisterPage() {
       <section className="py-24 flex justify-center">
         <div className="mx-4 bg-gradient-to-r from-[#073b4c] to-[#118ab2] px-4 py-[75px] text-white sm:mx-0 sm:px-10 lg:px-[73px] rounded-xl">
           {/* Header section */}
-          <div className="mb-[30px] flex max-w-[537px] flex-col items-center text-center">
+          <div className="mb-[30px] flex max-w-[537px] mx-auto flex-col items-center text-center">
             <div className="inline-block mb-2 bg-[#118ab2]/30 text-white px-4 py-1.5 rounded-full text-sm font-medium">
               Register
             </div>
@@ -309,6 +309,43 @@ export default function RegisterPage() {
                     </div>
                   )}
                 />
+
+                {/* Bank Transfer Details Section */}
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    Payment Information
+                  </h3>
+                  <div className="space-y-3">
+                    <h4 className="text-white font-medium">
+                      Direct Bank Transfer
+                    </h4>
+                    <div className="space-y-2 text-sm text-white/90">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Account Number:</span>
+                        <span className="font-mono bg-white/20 px-2 py-1 rounded">
+                          2359026502
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Bank:</span>
+                        <span>UBA</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Account Name:</span>
+                        <span className="text-right">
+                          AMERICAN CHEMICAL SOCIETY FED UNI OTUOKE
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mt-4 p-3 bg-[#FFD166]/20 border border-[#FFD166]/30 rounded-lg">
+                      <p className="text-sm text-white/90">
+                        <strong>Note:</strong> After making your payment, please
+                        upload your payment receipt below to complete your
+                        registration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
                 {/* File upload section */}
                 <div className="space-y-2">

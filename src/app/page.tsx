@@ -19,7 +19,8 @@ export default function Home() {
                 Conference Starts In
               </h2>
               <p className="text-[#118ab2]">
-                Don&apos;t miss the early bird registration ending June 30, 2025
+                Don&apos;t miss the early bird registration ending September 30,
+                2025
               </p>
             </div>
             <CountdownTimer targetDate="2025-11-04T00:00:00" />

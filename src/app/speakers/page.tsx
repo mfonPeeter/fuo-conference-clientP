@@ -74,6 +74,22 @@ const speakers = [
     slug: "olatunde-olatunji",
     image: "/images/speakers/prof-olatunde-olatunji.jpg", // Note: Image needs to be added
   },
+  {
+    name: "Dr. Halleluyah Oluwatobi Aworinde",
+    title: "HANT Postdoctoral Research Fellow",
+    institution: "Durban University of Technology, South Africa",
+    role: "Department of Information Technology",
+    slug: "halleluyah-aworinde",
+    image: "/images/speakers/dr-halleluyah-aworinde.jpg",
+  },
+  {
+    name: "Ushaseer Tembe",
+    title: "Founder & CEO of ProdCycle Limited",
+    institution: "ProdCycle Limited",
+    role: "Founder and CEO of AI Peers",
+    slug: "ushaseer-tembe",
+    image: "/images/speakers/ushaseer-tembe.jpg",
+  },
 ];
 
 export default function SpeakersPage() {

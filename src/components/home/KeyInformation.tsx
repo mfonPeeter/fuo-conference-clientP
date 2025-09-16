@@ -9,11 +9,11 @@ const importantDates = [
   },
   {
     heading: "Early Bird Registration",
-    timeframe: "May 31, 2025",
+    timeframe: "September 30, 2025",
   },
   {
     heading: "Registration Deadline",
-    timeframe: "August 15, 2025",
+    timeframe: "October 15, 2025",
   },
   {
     heading: "Conference Dates",
