@@ -10,6 +10,7 @@ export interface RegistrationData {
   whatsappNo: string;
   registrationType: string;
   registrationId: string;
+  isInternational: boolean;
 }
 
 export const encryptData = (data: RegistrationData): string => {

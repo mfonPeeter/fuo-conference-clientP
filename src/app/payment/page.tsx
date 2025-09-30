@@ -52,14 +52,12 @@ function PaymentContent() {
     setReference(`CONF-${timestamp}-${random}`);
   }, []);
 
-  // Calculate payment amount based on registration type
+  // Check isInternational flag to use correct currency rate for both Nigerian and International attendees
   const paymentAmount = parsedData?.registrationType
     ? getRegistrationFee(
         parsedData.registrationType as RegistrationType,
-        parsedData.registrationType === "International"
-          ? "International"
-          : "Nigerian"
-      ) * 100 // Convert to kobo
+        parsedData.isInternational ? "International" : "Nigerian"
+      ) * 100 // Converts NGN to kobo OR USD to cents
     : 0;
 
   // Paystack configuration
@@ -145,16 +143,19 @@ function PaymentContent() {
                 Amount:{" "}
                 {formatCurrency(
                   paymentAmount / 100,
-                  parsedData?.registrationType === "International"
-                    ? "International"
-                    : "Nigerian"
+                  parsedData?.isInternational ? "International" : "Nigerian"
                 )}
               </p>
               <p>Email: {parsedData?.email || EMAIL}</p>
               <p>
                 Name: {parsedData?.surname}, {parsedData?.otherNames}
               </p>
-              <p>Registration Type: {parsedData?.registrationType}</p>
+              <p>Registration Type: {parsedData?.registrationType as string}</p>
+              {parsedData?.isInternational && (
+                <p className="text-[#FFD166] text-sm mt-2">
+                  International Attendee
+                </p>
+              )}
             </div>
           </div>
 
